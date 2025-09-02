@@ -1,19 +1,91 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    ... <!-- Скопируйте весь блок <head> из index.html -->
-    <title>Контакты</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Название компании</title>
     <meta name="description" content="Связь с нами">
 </head>
 <body>
     <header>
-    ... <!-- Скопируйте весь блок <header> из index.html -->
+        <div class="logo">
+            <h1>Название компании</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="contacts.html" class="active">Контакты</a></li>
+            </ul>
+        </nav>
     </header>
+    
     <main>
+        <nav aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a> →
+            <span>Контакты</span>
+        </nav>
         
+        <h1>Контакты</h1>
+        
+        <section>
+            <h2>Контактная информация</h2>
+            <p>Адрес: г. Москва, ул. Примерная, д. 123</p>
+            <p>Телефон: +7 (495) 123-45-67</p>
+            <p>Email: info@company.ru</p>
+        </section>
+        
+        <section>
+            <h2>Режим работы</h2>
+            <p>Понедельник-Пятница: 9:00 - 18:00</p>
+            <p>Суббота: 10:00 - 16:00</p>
+            <p>Воскресенье: выходной</p>
+        </section>
+        
+        <section>
+            <h2>Форма обратной связи</h2>
+            <form>
+                <div>
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Ваш email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
     </main>
+    
     <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <p>Краткое описание деятельности компании</p>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>Телефон: +7 (495) 123-45-67</p>
+                <p>Email: info@company.ru</p>
+            </div>
+            <div class="footer-section">
+                <h3>Мы в соцсетях</h3>
+                <ul>
+                    <li><a href="#">VKontakte</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Название компании. Все права защищены.</p>
+        </div>
     </footer>
 </body>
 </html>
-... <!-- Скопируйте весь блок <footer> из index.html -->
