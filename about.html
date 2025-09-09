@@ -1,33 +1,174 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    ... <!-- Скопируйте весь блок <head> из index.html -->
-    <title>О нас - Название вашего сайта</title>
-    <meta name="description" content="Узнайте больше о нашей компании и истории">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - ВашСайт</title>
+    <meta name="description" content="Узнайте больше о нашей компании, миссии и команде профессионалов, создающей innovative решения для вашего бизнеса.">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-    ... <!-- Скопируйте весь блок <header> из index.html -->
+        <div class="header-container">
+            <a href="index.html" class="logo">ВашСайт</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html" class="active">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    
     <main>
-        <!-- Простые "хлебные крошки" -->
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a> →
-            <span>О нас</span>
-        </nav>
-        <h1>О нашей компании</h1>
-        <section>
-            <h2>Наша история</h2>
-            <p>Текст о том, как все начиналось...</p>
-        </section>
-        <section>
-            <h2>Наша команда</h2>
-            <p>Текст о команде...</p>
-        </section>
+        <div class="container">
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                <a href="index.html">Главная</a>
+                <span>→</span>
+                <span class="current">О нас</span>
+            </nav>
+            
+            <div class="content-center">
+                <section class="hero-section fade-in-up">
+                    <h1>О нашей компании</h1>
+                    <p>С 2023 года мы помогаем бизнесу расти с помощью современных digital-решений</p>
+                </section>
+                
+                <section class="content-section fade-in-up">
+                    <h2>🎯 Наша миссия</h2>
+                    <p>Мы верим, что каждый бизнес заслуживает качественных digital-решений. Наша миссия — создавать продукты, которые не только решают задачи, но и приносят реальную пользу нашим клиентам.</p>
+                    
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <h3>💡 Инновации</h3>
+                            <p>Мы постоянно изучаем новые технологии и внедряем их в наши проекты</p>
+                        </div>
+                        <div class="value-item">
+                            <h3>🤝 Партнёрство</h3>
+                            <p>Работаем как одна команда с нашими клиентами на всех этапах</p>
+                        </div>
+                        <div class="value-item">
+                            <h3>⭐ Качество</h3>
+                            <p>Не compromисов в качестве — только лучшие решения для вашего бизнеса</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="content-section fade-in-up">
+                    <h2>📈 Наша история</h2>
+                    <p>Всё началось в 2023 году, когда группа энтузиастов решила создать компанию, которая будет делать digital-продукты по-настоящему качественно и с душой.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Январь 2023</div>
+                            <div class="timeline-content">
+                                <h3>Основание компании</h3>
+                                <p>Начало пути с первого проекта для местного бизнеса</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Июнь 2023</div>
+                            <div class="timeline-content">
+                                <h3>Первые 10 клиентов</h3>
+                                <p>Расширение команды и портфолио выполненных работ</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Декабрь 2023</div>
+                            <div class="timeline-content">
+                                <h3>50+ успешных проектов</h3>
+                                <p>Стабильный рост и признание на рынке digital-услуг</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="content-section fade-in-up">
+                    <h2>👥 Наша команда</h2>
+                    <p>Мы — команда из 15 профессионалов, объединённых общей целью: создавать лучшие digital-решения для наших клиентов.</p>
+                    
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-photo"></div>
+                            <h3>Анна Иванова</h3>
+                            <p class="position">CEO & Основатель</p>
+                            <p>12 лет в IT, эксперт в digital-трансформации</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo"></div>
+                            <h3>Максим Петров</h3>
+                            <p class="position">Технический директор</p>
+                            <p>Full-stack разработчик с 8-летним опытом</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo"></div>
+                            <h3>Елена Сидорова</h3>
+                            <p class="position">Lead Designer</p>
+                            <p>Создаёт интерфейсы, которые нравятся пользователям</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="content-section fade-in-up">
+                    <h2>📊 Наши достижения</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Завершённых проектов</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Довольных клиентов</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Профессионалов в команде</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Техническая поддержка</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="cta-container">
+                    <h2>Готовы начать сотрудничество?</h2>
+                    <p>Свяжитесь с нами сегодня и получите бесплатную консультацию</p>
+                    <a href="contacts.html" class="cta-button">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
     </main>
+    
     <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О компании</h3>
+                    <p>Создаём digital-решения для бизнеса с 2023 года. Профессионализм и качество — наш стандарт.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>+7 (495) 123-45-67</p>
+                    <p>info@yoursite.ru</p>
+                    <p>г. Москва, ул. Примерная, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <a href="#">Telegram</a>
+                    <a href="#">VKontakte</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ВашСайт. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="main.js" defer></script>
 </body>
 </html>
-... <!-- Скопируйте весь блок <footer> из index.html -->

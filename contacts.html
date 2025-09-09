@@ -3,90 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - Название компании</title>
-    <meta name="description" content="Связь с нами">
+    <title>Контакты - ВашСайт</title>
+    <meta name="description" content="Свяжитесь с нами удобным способом. Мы всегда готовы ответить на ваши вопросы и обсудить сотрудничество.">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Название компании</h1>
+        <div class="header-container">
+            <a href="index.html" class="logo">ВашСайт</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="services.html">Услуги</a></li>
-                <li><a href="contacts.html" class="active">Контакты</a></li>
-            </ul>
-        </nav>
     </header>
     
     <main>
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a> →
-            <span>Контакты</span>
-        </nav>
-        
-        <h1>Контакты</h1>
-        
-        <section>
-            <h2>Контактная информация</h2>
-            <p>Адрес: г. Москва, ул. Примерная, д. 123</p>
-            <p>Телефон: +7 (495) 123-45-67</p>
-            <p>Email: info@company.ru</p>
-        </section>
-        
-        <section>
-            <h2>Режим работы</h2>
-            <p>Понедельник-Пятница: 9:00 - 18:00</p>
-            <p>Суббота: 10:00 - 16:00</p>
-            <p>Воскресенье: выходной</p>
-        </section>
-        
-        <section>
-            <h2>Форма обратной связи</h2>
-            <form>
-                <div>
-                    <label for="name">Ваше имя:</label>
-                    <input type="text" id="name" name="name" required>
+        <div class="container">
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                <a href="index.html">Главная</a>
+                <span>→</span>
+                <span class="current">Контакты</span>
+            </nav>
+            
+            <div class="content-center">
+                <h1 class="text-center fade-in-up">Свяжитесь с нами</h1>
+                <p class="text-center mb-6">Мы всегда рады новым проектам и готовы ответить на все ваши вопросы</p>
+                
+                <div class="contact-grid">
+                    <section class="content-section fade-in-up">
+                        <h2>📞 Контактная информация</h2>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <strong>Адрес:</strong>
+                                <p>г. Москва, ул. Примерная, д. 123<br>Бизнес-центр "Престиж", офис 456</p>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Телефон:</strong>
+                                <p>+7 (495) 123-45-67</p>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Email:</strong>
+                                <p>info@yoursite.ru</p>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Telegram:</strong>
+                                <p>@yoursite_support</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="content-section fade-in-up">
+                        <h2>🕒 Режим работы</h2>
+                        <div class="schedule">
+                            <div class="schedule-item">
+                                <span>Понедельник-Пятница:</span>
+                                <span>9:00 - 18:00</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span>Суббота:</span>
+                                <span>10:00 - 16:00</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span>Воскресенье:</span>
+                                <span>выходной</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span>Техподдержка:</span>
+                                <span>круглосуточно</span>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div>
-                    <label for="email">Ваш email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="message">Сообщение:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Отправить</button>
-            </form>
-        </section>
+                
+                <section class="content-section fade-in-up">
+                    <h2 class="text-center">📨 Форма обратной связи</h2>
+                    <p class="text-center mb-4">Заполните форму ниже, и мы свяжемся с вами в течение 2 часов</p>
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Ваше имя *</label>
+                            <input type="text" id="contact-name" name="name" required placeholder="Иван Иванов">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-email">Ваш email *</label>
+                            <input type="email" id="contact-email" name="email" required placeholder="ivan@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-phone">Телефон</label>
+                            <input type="tel" id="contact-phone" name="phone" placeholder="+7 (900) 123-45-67">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-subject">Тема сообщения</label>
+                            <select id="contact-subject" name="subject">
+                                <option value="">Выберите тему</option>
+                                <option value="consultation">Консультация</option>
+                                <option value="project">Заказ проекта</option>
+                                <option value="support">Техническая поддержка</option>
+                                <option value="partnership">Сотрудничество</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">Сообщение *</label>
+                            <textarea id="contact-message" name="message" rows="6" required placeholder="Опишите ваш вопрос или проект..."></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="cta-button">Отправить сообщение</button>
+                        </div>
+                    </form>
+                </section>
+                
+                <section class="content-section fade-in-up">
+                    <h2 class="text-center">📍 Как нас найти</h2>
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <div class="map-content">
+                                <h3>Мы находимся в центре Москвы</h3>
+                                <p>Ближайшее метро: "Примерная" (5 минут пешком)</p>
+                                <p>Парковка: бесплатная подземная парковка на 50 мест</p>
+                                <p>Доступная среда: полная доступность для маломобильных групп</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
     
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>О компании</h3>
-                <p>Краткое описание деятельности компании</p>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О компании</h3>
+                    <p>Создаём digital-решения для бизнеса с 2023 года. Профессионализм и качество — наш стандарт.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>+7 (495) 123-45-67</p>
+                    <p>info@yoursite.ru</p>
+                    <p>г. Москва, ул. Примерная, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <a href="#">Telegram</a>
+                    <a href="#">VKontakte</a>
+                    <a href="#">YouTube</a>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Контакты</h3>
-                <p>Телефон: +7 (495) 123-45-67</p>
-                <p>Email: info@company.ru</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ВашСайт. Все права защищены.</p>
             </div>
-            <div class="footer-section">
-                <h3>Мы в соцсетях</h3>
-                <ul>
-                    <li><a href="#">VKontakte</a></li>
-                    <li><a href="#">Telegram</a></li>
-                    <li><a href="#">YouTube</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Название компании. Все права защищены.</p>
         </div>
     </footer>
+
+    <script src="main.js" defer></script>
 </body>
 </html>
