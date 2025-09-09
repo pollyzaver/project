@@ -1,86 +1,154 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Название вашего сайта</title>
-    <meta name="description" content="Краткое описание главной страницы вашего сайта">
+    <title>Главная - Ваш Сайт</title>
+    <meta name="description" content="Добро пожаловать на наш сайт! Мы предлагаем качественные услуги и индивидуальный подход к каждому клиенту.">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Шапка сайта -->
     <header>
-        <a href="/">Логотип или название сайта</a>
-        <!-- Главное меню навигации -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <a href="/" class="logo">ВашСайт</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <!-- Уникальное основное содержимое страницы -->
     <main>
-        <h1>Добро пожаловать на наш сайт!</h1>
-        <!-- Секция 1 с якорем -->
-        <section id="services">
-            <h2>Наши услуги</h2>
-            <p>Описание предоставляемых услуг...</p>
-            <a href="#contacts">Связаться с нами</a> <!-- Якорная ссылка внутри страницы -->
-        </section>
-        <!-- Секция 2 с якорем -->
-        <section id="portfolio">
-            <h2>Портфолио</h2>
-            <p>Примеры наших работ...</p>
-        </section>
-        <!-- Секция 3 с якорем -->
-        <section id="contacts">
-            <h2>Контактная информация</h2>
-            <p>Наши контакты...</p>
-            <a href="contacts.html">Подробнее</a> <!-- Ссылка на отдельную страницу -->
-        </section>
-        <button id="openDialog" type="button">Написать нам</button>
-            <dialog id="contactDialog" aria-labelledby="dialogTitle">
+        <div class="container">
+            <!-- Герой-секция -->
+            <section class="hero-section fade-in-up">
+                <h1>Добро пожаловать на наш сайт!</h1>
+                <p>Мы создаём innovative решения для вашего бизнеса с 2023 года</p>
+            </section>
+
+            <div class="content-center">
+                <!-- Секция 1 с якорем -->
+                <section id="services" class="content-section fade-in-up">
+                    <h2>Наши услуги</h2>
+                    <p>Мы предлагаем широкий спектр профессиональных услуг: веб-разработка, дизайн, консультации и многое другое. Каждый проект мы выполняем с максимальным вниманием к деталям.</p>
+                    <div class="text-center mt-4">
+                        <a href="#contacts" class="cta-button">Связаться с нами</a>
+                    </div>
+                </section>
+
+                <!-- Секция 2 с якорем -->
+                <section id="portfolio" class="content-section fade-in-up">
+                    <h2>Портфолио</h2>
+                    <p>Ознакомьтесь с нашими последними работами. Мы гордимся каждым проектом и стремимся к совершенству в каждой детали.</p>
+                    <div class="text-center mt-4">
+                        <a href="#contacts" class="cta-button">Посмотреть работы</a>
+                    </div>
+                </section>
+
+                <!-- Секция 3 с якорем -->
+                <section id="contacts" class="content-section fade-in-up">
+                    <h2>Контактная информация</h2>
+                    <p>Готовы начать сотрудничество? Свяжитесь с нами удобным для вас способом. Мы всегда на связи и готовы ответить на все ваши вопросы.</p>
+                    <div class="text-center mt-4">
+                        <a href="contacts.html" class="cta-button">Подробнее</a>
+                    </div>
+                </section>
+
+                <!-- Кнопка вызова модалки -->
+                <div class="cta-container">
+                    <button id="openDialog" type="button" class="bounce">
+                        📧 Написать нам
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальное окно -->
+        <dialog id="contactDialog" aria-labelledby="dialogTitle">
+            <div class="form-container">
                 <h2 id="dialogTitle">Обратная связь</h2>
                 <form id="contactForm" method="dialog" novalidate>
-                    <label for="name">Имя</label>
-                    <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name" placeholder="Введите ваше имя">
+                    </div>
 
-                    <label for="email">E-mail</label>
-                    <input id="email" name="email" type="email" required autocomplete="email">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email" required autocomplete="email" placeholder="your@email.com">
+                    </div>
 
-                    <label for="phone">Телефон</label>
-                    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
-                        aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__"
-                        required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
-                    <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                            aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__"
+                            required pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$">
+                        <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
+                    </div>
 
-                    <label for="date">Дата</label>
-                    <input id="date" name="date" type="date">
+                    <div class="form-group">
+                        <label for="date">Дата</label>
+                        <input id="date" name="date" type="date">
+                    </div>
 
-                    <label for="topic">Тема</label>
-                    <select id="topic" name="topic" required>
-                    <option value="">Выберите тему</option>
-                    <option>Вопрос</option>
-                    <option>Заказ</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="topic">Тема обращения</label>
+                        <select id="topic" name="topic" required>
+                            <option value="">Выберите тему</option>
+                            <option value="Вопрос">Вопрос</option>
+                            <option value="Заказ">Заказ</option>
+                            <option value="Сотрудничество">Сотрудничество</option>
+                            <option value="Другое">Другое</option>
+                        </select>
+                    </div>
 
-                    <label for="message">Сообщение</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Расскажите о вашем проекте или задайте вопрос..."></textarea>
+                    </div>
 
                     <div class="form-actions">
-                    <button type="button" id="closeDialog">Закрыть</button>
-                    <button type="submit">Отправить</button>
+                        <button type="button" id="closeDialog">Закрыть</button>
+                        <button type="submit">Отправить сообщение</button>
                     </div>
                 </form>
-                </dialog>
+            </div>
+        </dialog>
     </main>
+
     <!-- Подвал сайта -->
     <footer>
-        <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О компании</h3>
+                    <p>Современные решения для вашего бизнеса. Профессиональный подход и качественное исполнение.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Телефон: +7 (123) 456-78-90</p>
+                    <p>Email: info@yoursite.ru</p>
+                    <p>Адрес: г. Москва, ул. Примерная, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <a href="#">Telegram</a>
+                    <a href="#">VKontakte</a>
+                    <a href="#">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ВашСайт. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
+
     <script src="main.js" defer></script>
 </body>
 </html>
