@@ -119,7 +119,7 @@ form?.addEventListener('submit', (e) => {
     dlg.close('success');
     // Сбрасываем форму
     form.reset();
-    // Показываем сообщение об успехе (можно заменить на красивый попап)
+    // Показываем сообщение об успехе
     alert('Форма успешно отправлена! Спасибо за обратную связь.');
 });
 
@@ -136,6 +136,20 @@ form?.querySelectorAll('input, select, textarea').forEach(field => {
         if (field.hasAttribute('aria-invalid')) {
             field.removeAttribute('aria-invalid');
             field.setCustomValidity('');
+        }
+    });
+});
+
+// ==================== ПЛАВНАЯ ПРОКРУТКА ДЛЯ ЯКОРЕЙ ====================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     });
 });

@@ -10,59 +10,65 @@
 </head>
 <body>
     <!-- Шапка сайта -->
-    <header>
-        <div class="header-container">
-            <a href="/" class="logo">ВашСайт</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Главная</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo">ВашСайт</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link nav__link--active">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contacts.html" class="nav__link">Контакты</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Уникальное основное содержимое страницы -->
-    <main>
+    <main class="main">
         <div class="container">
             <!-- Герой-секция -->
-            <section class="hero-section fade-in-up">
-                <h1>Добро пожаловать на наш сайт!</h1>
-                <p>Мы создаём innovative решения для вашего бизнеса с 2023 года</p>
+            <section class="hero fade-in-up">
+                <h1 class="hero__title">Добро пожаловать на наш сайт!</h1>
+                <p class="hero__description">Мы создаём innovative решения для вашего бизнеса с 2023 года</p>
             </section>
 
-            <div class="content-center">
+            <div class="container--narrow">
                 <!-- Секция 1 с якорем -->
-                <section id="services" class="content-section fade-in-up">
-                    <h2>Наши услуги</h2>
-                    <p>Мы предлагаем широкий спектр профессиональных услуг: веб-разработка, дизайн, консультации и многое другое. Каждый проект мы выполняем с максимальным вниманием к деталям.</p>
-                    <div class="text-center mt-4">
+                <section id="services" class="section fade-in-up">
+                    <h2 class="section__title">Наши услуги</h2>
+                    <p class="section__content">Мы предлагаем широкий спектр профессиональных услуг: веб-разработка, дизайн, консультации и многое другое. Каждый проект мы выполняем с максимальным вниманием к деталям.</p>
+                    <div class="text-center mt-6">
                         <a href="#contacts" class="cta-button">Связаться с нами</a>
                     </div>
                 </section>
 
                 <!-- Секция 2 с якорем -->
-                <section id="portfolio" class="content-section fade-in-up">
-                    <h2>Портфолио</h2>
-                    <p>Ознакомьтесь с нашими последними работами. Мы гордимся каждым проектом и стремимся к совершенству в каждой детали.</p>
-                    <div class="text-center mt-4">
+                <section id="portfolio" class="section fade-in-up">
+                    <h2 class="section__title">Портфолио</h2>
+                    <p class="section__content">Ознакомьтесь с нашими последними работами. Мы гордимся каждым проектом и стремимся к совершенству в каждой детали.</p>
+                    <div class="text-center mt-6">
                         <a href="#contacts" class="cta-button">Посмотреть работы</a>
                     </div>
                 </section>
 
                 <!-- Секция 3 с якорем -->
-                <section id="contacts" class="content-section fade-in-up">
-                    <h2>Контактная информация</h2>
-                    <p>Готовы начать сотрудничество? Свяжитесь с нами удобным для вас способом. Мы всегда на связи и готовы ответить на все ваши вопросы.</p>
-                    <div class="text-center mt-4">
+                <section id="contacts" class="section fade-in-up">
+                    <h2 class="section__title">Контактная информация</h2>
+                    <p class="section__content">Готовы начать сотрудничество? Свяжитесь с нами удобным для вас способом. Мы всегда на связи и готовы ответить на все ваши вопросы.</p>
+                    <div class="text-center mt-6">
                         <a href="contacts.html" class="cta-button">Подробнее</a>
                     </div>
                 </section>
 
                 <!-- Кнопка вызова модалки -->
                 <div class="cta-container">
-                    <button id="openDialog" type="button" class="bounce">
+                    <button id="openDialog" type="button" class="cta-container__button bounce">
                         📧 Написать нам
                     </button>
                 </div>
@@ -70,36 +76,36 @@
         </div>
 
         <!-- Модальное окно -->
-        <dialog id="contactDialog" aria-labelledby="dialogTitle">
-            <div class="form-container">
-                <h2 id="dialogTitle">Обратная связь</h2>
+        <dialog id="contactDialog" class="modal" aria-labelledby="dialogTitle">
+            <div class="form">
+                <h2 id="dialogTitle" class="modal__title">Обратная связь</h2>
                 <form id="contactForm" method="dialog" novalidate>
-                    <div class="form-group">
-                        <label for="name">Имя</label>
-                        <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name" placeholder="Введите ваше имя">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Имя</label>
+                        <input id="name" name="name" type="text" class="form__input" required minlength="2" autocomplete="given-name" placeholder="Введите ваше имя">
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input id="email" name="email" type="email" required autocomplete="email" placeholder="your@email.com">
+                    <div class="form__group">
+                        <label for="email" class="form__label">E-mail</label>
+                        <input id="email" name="email" type="email" class="form__input" required autocomplete="email" placeholder="your@email.com">
                     </div>
 
-                    <div class="form-group">
-                        <label for="phone">Телефон</label>
-                        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Телефон</label>
+                        <input id="phone" name="phone" type="tel" class="form__input" inputmode="tel" autocomplete="tel"
                             aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__"
                             required pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$">
-                        <small id="phoneHelp">Формат: +7 (900) 000-00-00</small>
+                        <small id="phoneHelp" class="form__help">Формат: +7 (900) 000-00-00</small>
                     </div>
 
-                    <div class="form-group">
-                        <label for="date">Дата</label>
-                        <input id="date" name="date" type="date">
+                    <div class="form__group">
+                        <label for="date" class="form__label">Дата</label>
+                        <input id="date" name="date" type="date" class="form__input">
                     </div>
 
-                    <div class="form-group">
-                        <label for="topic">Тема обращения</label>
-                        <select id="topic" name="topic" required>
+                    <div class="form__group">
+                        <label for="topic" class="form__label">Тема обращения</label>
+                        <select id="topic" name="topic" class="form__select" required>
                             <option value="">Выберите тему</option>
                             <option value="Вопрос">Вопрос</option>
                             <option value="Заказ">Заказ</option>
@@ -108,14 +114,14 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="message">Сообщение</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Расскажите о вашем проекте или задайте вопрос..."></textarea>
+                    <div class="form__group">
+                        <label for="message" class="form__label">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" class="form__textarea" required placeholder="Расскажите о вашем проекте или задайте вопрос..."></textarea>
                     </div>
 
-                    <div class="form-actions">
-                        <button type="button" id="closeDialog">Закрыть</button>
-                        <button type="submit">Отправить сообщение</button>
+                    <div class="form__actions">
+                        <button type="button" id="closeDialog" class="form__button form__button--secondary">Закрыть</button>
+                        <button type="submit" class="form__button form__button--primary">Отправить сообщение</button>
                     </div>
                 </form>
             </div>
@@ -123,27 +129,27 @@
     </main>
 
     <!-- Подвал сайта -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>О компании</h3>
-                    <p>Современные решения для вашего бизнеса. Профессиональный подход и качественное исполнение.</p>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">О компании</h3>
+                    <p class="footer__text">Современные решения для вашего бизнеса. Профессиональный подход и качественное исполнение.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Контакты</h3>
-                    <p>Телефон: +7 (123) 456-78-90</p>
-                    <p>Email: info@yoursite.ru</p>
-                    <p>Адрес: г. Москва, ул. Примерная, 123</p>
+                <div class="footer__section">
+                    <h3 class="footer__title">Контакты</h3>
+                    <p class="footer__text">Телефон: +7 (123) 456-78-90</p>
+                    <p class="footer__text">Email: info@yoursite.ru</p>
+                    <p class="footer__text">Адрес: г. Москва, ул. Примерная, 123</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Мы в соцсетях</h3>
-                    <a href="#">Telegram</a>
-                    <a href="#">VKontakte</a>
-                    <a href="#">WhatsApp</a>
+                <div class="footer__section">
+                    <h3 class="footer__title">Мы в соцсетях</h3>
+                    <a href="#" class="footer__link">Telegram</a>
+                    <a href="#" class="footer__link">VKontakte</a>
+                    <a href="#" class="footer__link">WhatsApp</a>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer__bottom">
                 <p>&copy; 2023 ВашСайт. Все права защищены.</p>
             </div>
         </div>
