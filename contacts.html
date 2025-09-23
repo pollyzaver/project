@@ -1,172 +1,154 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - ВашСайт</title>
-    <meta name="description" content="Свяжитесь с нами удобным способом. Мы всегда готовы ответить на ваши вопросы и обсудить сотрудничество.">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты - ВашСайт</title>
+  <meta name="description" content="Свяжитесь с нами удобным способом. Мы всегда готовы ответить на ваши вопросы и обсудить сотрудничество.">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">ВашСайт</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                    <li><a href="contacts.html" class="active">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <main>
-        <div class="container">
-            <!-- Хлебные крошки -->
-            <nav class="breadcrumbs" aria-label="Хлебные крошки">
-                <a href="index.html">Главная</a>
-                <span>→</span>
-                <span class="current">Контакты</span>
-            </nav>
-            
-            <div class="content-center">
-                <h1 class="text-center fade-in-up">Свяжитесь с нами</h1>
-                <p class="text-center mb-6">Мы всегда рады новым проектам и готовы ответить на все ваши вопросы</p>
-                
-                <div class="contact-grid">
-                    <section class="content-section fade-in-up">
-                        <h2>📞 Контактная информация</h2>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <strong>Адрес:</strong>
-                                <p>г. Москва, ул. Примерная, д. 123<br>Бизнес-центр "Престиж", офис 456</p>
-                            </div>
-                            <div class="contact-item">
-                                <strong>Телефон:</strong>
-                                <p>+7 (495) 123-45-67</p>
-                            </div>
-                            <div class="contact-item">
-                                <strong>Email:</strong>
-                                <p>info@yoursite.ru</p>
-                            </div>
-                            <div class="contact-item">
-                                <strong>Telegram:</strong>
-                                <p>@yoursite_support</p>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <section class="content-section fade-in-up">
-                        <h2>🕒 Режим работы</h2>
-                        <div class="schedule">
-                            <div class="schedule-item">
-                                <span>Понедельник-Пятница:</span>
-                                <span>9:00 - 18:00</span>
-                            </div>
-                            <div class="schedule-item">
-                                <span>Суббота:</span>
-                                <span>10:00 - 16:00</span>
-                            </div>
-                            <div class="schedule-item">
-                                <span>Воскресенье:</span>
-                                <span>выходной</span>
-                            </div>
-                            <div class="schedule-item">
-                                <span>Техподдержка:</span>
-                                <span>круглосуточно</span>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                
-                <section class="content-section fade-in-up">
-                    <h2 class="text-center">📨 Форма обратной связи</h2>
-                    <p class="text-center mb-4">Заполните форму ниже, и мы свяжемся с вами в течение 2 часов</p>
-                    
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="contact-name">Ваше имя *</label>
-                            <input type="text" id="contact-name" name="name" required placeholder="Иван Иванов">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-email">Ваш email *</label>
-                            <input type="email" id="contact-email" name="email" required placeholder="ivan@example.com">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-phone">Телефон</label>
-                            <input type="tel" id="contact-phone" name="phone" placeholder="+7 (900) 123-45-67">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-subject">Тема сообщения</label>
-                            <select id="contact-subject" name="subject">
-                                <option value="">Выберите тему</option>
-                                <option value="consultation">Консультация</option>
-                                <option value="project">Заказ проекта</option>
-                                <option value="support">Техническая поддержка</option>
-                                <option value="partnership">Сотрудничество</option>
-                                <option value="other">Другое</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-message">Сообщение *</label>
-                            <textarea id="contact-message" name="message" rows="6" required placeholder="Опишите ваш вопрос или проект..."></textarea>
-                        </div>
-                        
-                        <div class="form-actions">
-                            <button type="submit" class="cta-button">Отправить сообщение</button>
-                        </div>
-                    </form>
-                </section>
-                
-                <section class="content-section fade-in-up">
-                    <h2 class="text-center">📍 Как нас найти</h2>
-                    <div class="map-container">
-                        <div class="map-placeholder">
-                            <div class="map-content">
-                                <h3>Мы находимся в центре Москвы</h3>
-                                <p>Ближайшее метро: "Примерная" (5 минут пешком)</p>
-                                <p>Парковка: бесплатная подземная парковка на 50 мест</p>
-                                <p>Доступная среда: полная доступность для маломобильных групп</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </main>
-    
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>О компании</h3>
-                    <p>Создаём digital-решения для бизнеса с 2023 года. Профессионализм и качество — наш стандарт.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Контакты</h3>
-                    <p>+7 (495) 123-45-67</p>
-                    <p>info@yoursite.ru</p>
-                    <p>г. Москва, ул. Примерная, 123</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Мы в соцсетях</h3>
-                    <a href="#">Telegram</a>
-                    <a href="#">VKontakte</a>
-                    <a href="#">YouTube</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 ВашСайт. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
+  <!-- Шапка -->
+  <header class="site-header">
+    <div class="site-header__container container">
+      <a href="index.html" class="site-header__brand">VinylStore</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link site-nav__link--active">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="about.html" class="site-nav__link">О нас</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="contacts.html" class="site-nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <script src="main.js" defer></script>
+  <main class="main">
+    <div class="container">
+      <!-- Хлебные крошки -->
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a>
+        <span>→</span>
+        <span class="current">Контакты</span>
+      </nav>
+
+      <!-- Заголовок -->
+      <section class="section fade-in-up text-center">
+        <h1 class="section__title">Свяжитесь с нами</h1>
+        <p class="section__content">Мы всегда рады новым проектам и готовы ответить на все ваши вопросы</p>
+      </section>
+
+      <!-- Контакты -->
+      <section class="section fade-in-up">
+        <h2 class="section__title">📞 Контактная информация</h2>
+        <div class="contact-info">
+          <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 123, офис 456</p>
+          <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+          <p><strong>Email:</strong> info@yoursite.ru</p>
+          <p><strong>Telegram:</strong> @yoursite_support</p>
+        </div>
+      </section>
+
+      <!-- Режим работы -->
+      <section class="section fade-in-up">
+        <h2 class="section__title">🕒 Режим работы</h2>
+        <ul>
+          <li><strong>Пн–Пт:</strong> 9:00 – 18:00</li>
+          <li><strong>Сб:</strong> 10:00 – 16:00</li>
+          <li><strong>Вс:</strong> выходной</li>
+          <li><strong>Техподдержка:</strong> круглосуточно</li>
+        </ul>
+      </section>
+
+      <!-- Форма -->
+      <section class="section fade-in-up">
+        <h2 class="section__title text-center">📨 Форма обратной связи</h2>
+        <p class="section__content text-center">Заполните форму ниже, и мы свяжемся с вами в течение 2 часов</p>
+
+        <form class="form">
+          <div class="form__group">
+            <label for="contact-name" class="form__label">Ваше имя *</label>
+            <input id="contact-name" type="text" name="name" class="form__control" required placeholder="Иван Иванов">
+          </div>
+
+          <div class="form__group">
+            <label for="contact-email" class="form__label">Ваш email *</label>
+            <input id="contact-email" type="email" name="email" class="form__control" required placeholder="ivan@example.com">
+          </div>
+
+          <div class="form__group">
+            <label for="contact-phone" class="form__label">Телефон</label>
+            <input id="contact-phone" type="tel" name="phone" class="form__control" placeholder="+7 (900) 123-45-67">
+          </div>
+
+          <div class="form__group">
+            <label for="contact-subject" class="form__label">Тема сообщения</label>
+            <select id="contact-subject" name="subject" class="form__control">
+              <option value="">Выберите тему</option>
+              <option value="consultation">Консультация</option>
+              <option value="project">Заказ проекта</option>
+              <option value="support">Техническая поддержка</option>
+              <option value="partnership">Сотрудничество</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="contact-message" class="form__label">Сообщение *</label>
+            <textarea id="contact-message" name="message" rows="6" class="form__control" required placeholder="Опишите ваш вопрос или проект..."></textarea>
+          </div>
+
+          <div class="form__actions text-center">
+            <button type="submit" class="cta-button">Отправить сообщение</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Карта -->
+      <section class="section fade-in-up">
+        <h2 class="section__title text-center">📍 Как нас найти</h2>
+        <div class="media-container">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=37.805680%2C55.801121&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc1MjQ1MRJB0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsIDExLdGPINCf0LDRgNC60L7QstCw0Y8g0YPQu9C40YbQsCwgMzYiCg0DORdCFVk0X0I%2C&z=16&theme=dark"
+                  title="Карта офиса"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__content">
+        <div class="site-footer__section">
+          <h3 class="site-footer__title">О компании</h3>
+          <p class="site-footer__text">Магазин винила в Москве</p>
+        </div>
+        <div class="site-footer__section">
+          <h3 class="site-footer__title">Контакты</h3>
+          <p class="site-footer__text">Телефон: +7 (950) 189-35-57</p>
+          <p class="site-footer__text">Email: pollzyaver777</p>
+          <p class="site-footer__text">Адрес: г. Москва, ул. 11-я Парковая, 36</p>
+        </div>
+        <div class="site-footer__section">
+          <h3 class="site-footer__title">Мы в соцсетях</h3>
+          <a href="https://t.me/meinewelllt" class="site-footer__link">Telegram</a>
+          <a href="https://vk.com/p.zavershinskaya" class="site-footer__link">VKontakte</a>
+          <a href="https://wa.me/79501893557" class="site-footer__link">WhatsApp</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2025 ВашСайт. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
 </body>
 </html>

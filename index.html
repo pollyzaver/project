@@ -1,160 +1,177 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Ваш Сайт</title>
-    <meta name="description" content="Добро пожаловать на наш сайт! Мы предлагаем качественные услуги и индивидуальный подход к каждому клиенту.">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная - Ваш Сайт</title>
+  <meta name="description" content="Добро пожаловать на наш сайт! Мы предлагаем качественные услуги и индивидуальный подход к каждому клиенту.">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Шапка сайта -->
-    <header class="header">
-        <div class="container header__container">
-            <a href="index.html" class="header__logo">ВашСайт</a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="index.html" class="nav__link nav__link--active">Главная</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="about.html" class="nav__link">О нас</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contacts.html" class="nav__link">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
+  <!-- Шапка -->
+  <header class="site-header">
+    <div class="site-header__container container">
+      <a href="index.html" class="site-header__brand">VinylStore</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="index.html" class="site-nav__link site-nav__link--active">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="about.html" class="site-nav__link">О нас</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="contacts.html" class="site-nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Контент -->
+  <main class="main">
+    <div class="container">
+      <!-- Hero -->
+      <section class="hero fade-in-up">
+        <h1 class="hero__title">Добро пожаловать в магазин винила!</h1>
+        <p class="hero__description">Мы создаём инновационные решения для вашего бизнеса с 2023 года</p>
+      </section>
+
+      <div class="container--narrow">
+        <!-- Услуги -->
+        <section id="services" class="section fade-in-up">
+          <h2 class="section__title">Наши услуги</h2>
+          <p class="section__content">Веб-разработка, дизайн, консультации и многое другое. Мы выполняем каждый проект с вниманием к деталям.</p>
+          <div class="text-center">
+            <a href="#contacts" class="cta-button">Связаться с нами</a>
+          </div>
+        </section>
+
+        <!-- Портфолио -->
+        <section id="portfolio" class="section fade-in-up">
+            <h2 class="section__title">Ассортимент</h2>
+            <p class="section__content">Ознакомьтесь с нашими виниловыми пластинками. Мы гордимся каждым экземпляром!</p>
+            <div class="text-center">
+                <a href="#contacts" class="cta-button">Посмотреть все пластинки</a>
+            </div>
+
+            <!-- Сетка с пластинками -->
+            <div class="vinyl-grid">
+                <img src="assets/vinyl1.jpg" alt="Пластинка 1" class="responsive-image" loading="lazy">
+                <img src="assets/vinyl2.jpg" alt="Пластинка 2" class="responsive-image" loading="lazy">
+                <img src="assets/vinyl3.jpg" alt="Пластинка 3" class="responsive-image" loading="lazy">
+            </div>
+        </section>
+
+
+        <!-- Контакты -->
+        <section id="contacts" class="section fade-in-up">
+          <h2 class="section__title">Контактная информация</h2>
+          <p class="section__content">Хотите заказать виниловую пластинку? Свяжитесь с нами удобным для вас способом.</p>
+          <div class="text-center">
+            <a href="contacts.html" class="cta-button">Подробнее</a>
+          </div>
+        </section>
+
+        <!-- Видеоблок -->
+        <div class="media-container">
+            <video controls poster="assets/preview.jpg">
+                <source src="assets/video.mp4" type="video/mp4">
+                <source src="assets/video.webm" type="video/webm">
+                Ваш браузер не поддерживает видео.
+            </video>
         </div>
-    </header>
 
-    <!-- Уникальное основное содержимое страницы -->
-    <main class="main">
-        <div class="container">
-            <!-- Герой-секция -->
-            <section class="hero fade-in-up">
-                <h1 class="hero__title">Добро пожаловать на наш сайт!</h1>
-                <p class="hero__description">Мы создаём innovative решения для вашего бизнеса с 2023 года</p>
-            </section>
 
-            <div class="container--narrow">
-                <!-- Секция 1 с якорем -->
-                <section id="services" class="section fade-in-up">
-                    <h2 class="section__title">Наши услуги</h2>
-                    <p class="section__content">Мы предлагаем широкий спектр профессиональных услуг: веб-разработка, дизайн, консультации и многое другое. Каждый проект мы выполняем с максимальным вниманием к деталям.</p>
-                    <div class="text-center mt-6">
-                        <a href="#contacts" class="cta-button">Связаться с нами</a>
-                    </div>
-                </section>
-
-                <!-- Секция 2 с якорем -->
-                <section id="portfolio" class="section fade-in-up">
-                    <h2 class="section__title">Портфолио</h2>
-                    <p class="section__content">Ознакомьтесь с нашими последними работами. Мы гордимся каждым проектом и стремимся к совершенству в каждой детали.</p>
-                    <div class="text-center mt-6">
-                        <a href="#contacts" class="cta-button">Посмотреть работы</a>
-                    </div>
-                </section>
-
-                <!-- Секция 3 с якорем -->
-                <section id="contacts" class="section fade-in-up">
-                    <h2 class="section__title">Контактная информация</h2>
-                    <p class="section__content">Готовы начать сотрудничество? Свяжитесь с нами удобным для вас способом. Мы всегда на связи и готовы ответить на все ваши вопросы.</p>
-                    <div class="text-center mt-6">
-                        <a href="contacts.html" class="cta-button">Подробнее</a>
-                    </div>
-                </section>
-
-                <!-- Кнопка вызова модалки -->
-                <div class="cta-container">
-                    <button id="openDialog" type="button" class="cta-container__button bounce">
-                        📧 Написать нам
-                    </button>
-                </div>
-            </div>
+        <!-- Кнопка вызова модалки -->
+        <div class="text-center">
+          <button id="openDialog" type="button" class="cta-button">
+            Написать нам
+          </button>
         </div>
+      </div>
+    </div>
 
-        <!-- Модальное окно -->
-        <dialog id="contactDialog" class="modal" aria-labelledby="dialogTitle">
-            <div class="form">
-                <h2 id="dialogTitle" class="modal__title">Обратная связь</h2>
-                <form id="contactForm" method="dialog" novalidate>
-                    <div class="form__group">
-                        <label for="name" class="form__label">Имя</label>
-                        <input id="name" name="name" type="text" class="form__input" required minlength="2" autocomplete="given-name" placeholder="Введите ваше имя">
-                    </div>
+    <!-- Модальное окно -->
+    <dialog id="contactDialog" class="modal" aria-labelledby="dialogTitle">
+      <div class="form">
+        <h2 id="dialogTitle" class="modal__title">Обратная связь</h2>
+        <form id="contactForm" method="dialog" novalidate>
+          <div class="form__group">
+            <label for="name" class="form__label">Имя</label>
+            <input id="name" name="name" type="text" class="form__control" required minlength="2" placeholder="Введите ваше имя">
+          </div>
 
-                    <div class="form__group">
-                        <label for="email" class="form__label">E-mail</label>
-                        <input id="email" name="email" type="email" class="form__input" required autocomplete="email" placeholder="your@email.com">
-                    </div>
+          <div class="form__group">
+            <label for="email" class="form__label">E-mail</label>
+            <input id="email" name="email" type="email" class="form__control" required placeholder="your@email.com">
+          </div>
 
-                    <div class="form__group">
-                        <label for="phone" class="form__label">Телефон</label>
-                        <input id="phone" name="phone" type="tel" class="form__input" inputmode="tel" autocomplete="tel"
-                            aria-describedby="phoneHelp" placeholder="+7 (___) ___-__-__"
-                            required pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$">
-                        <small id="phoneHelp" class="form__help">Формат: +7 (900) 000-00-00</small>
-                    </div>
+          <div class="form__group">
+            <label for="phone" class="form__label">Телефон</label>
+            <input id="phone" name="phone" type="tel" class="form__control"
+              placeholder="+7 (___) ___-__-__"
+              required pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$">
+          </div>
 
-                    <div class="form__group">
-                        <label for="date" class="form__label">Дата</label>
-                        <input id="date" name="date" type="date" class="form__input">
-                    </div>
+          <div class="form__group">
+            <label for="date" class="form__label">Дата</label>
+            <input id="date" name="date" type="date" class="form__control">
+          </div>
 
-                    <div class="form__group">
-                        <label for="topic" class="form__label">Тема обращения</label>
-                        <select id="topic" name="topic" class="form__select" required>
-                            <option value="">Выберите тему</option>
-                            <option value="Вопрос">Вопрос</option>
-                            <option value="Заказ">Заказ</option>
-                            <option value="Сотрудничество">Сотрудничество</option>
-                            <option value="Другое">Другое</option>
-                        </select>
-                    </div>
+          <div class="form__group">
+            <label for="topic" class="form__label">Тема обращения</label>
+            <select id="topic" name="topic" class="form__control" required>
+              <option value="">Выберите тему</option>
+              <option value="Вопрос">Вопрос</option>
+              <option value="Заказ">Заказ</option>
+              <option value="Сотрудничество">Сотрудничество</option>
+              <option value="Другое">Другое</option>
+            </select>
+          </div>
 
-                    <div class="form__group">
-                        <label for="message" class="form__label">Сообщение</label>
-                        <textarea id="message" name="message" rows="5" class="form__textarea" required placeholder="Расскажите о вашем проекте или задайте вопрос..."></textarea>
-                    </div>
+          <div class="form__group">
+            <label for="message" class="form__label">Сообщение</label>
+            <textarea id="message" name="message" rows="5" class="form__control" required placeholder="Расскажите о вашем проекте..."></textarea>
+          </div>
 
-                    <div class="form__actions">
-                        <button type="button" id="closeDialog" class="form__button form__button--secondary">Закрыть</button>
-                        <button type="submit" class="form__button form__button--primary">Отправить сообщение</button>
-                    </div>
-                </form>
-            </div>
-        </dialog>
-    </main>
+          <div class="form__actions text-center">
+            <button type="button" id="closeDialog" class="cta-button">Закрыть</button>
+            <button type="submit" class="cta-button">Отправить сообщение</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+  </main>
 
-    <!-- Подвал сайта -->
-    <footer class="footer">
-        <div class="container footer__container">
-            <div class="footer__content">
-                <div class="footer__section">
-                    <h3 class="footer__title">О компании</h3>
-                    <p class="footer__text">Современные решения для вашего бизнеса. Профессиональный подход и качественное исполнение.</p>
-                </div>
-                <div class="footer__section">
-                    <h3 class="footer__title">Контакты</h3>
-                    <p class="footer__text">Телефон: +7 (123) 456-78-90</p>
-                    <p class="footer__text">Email: info@yoursite.ru</p>
-                    <p class="footer__text">Адрес: г. Москва, ул. Примерная, 123</p>
-                </div>
-                <div class="footer__section">
-                    <h3 class="footer__title">Мы в соцсетях</h3>
-                    <a href="#" class="footer__link">Telegram</a>
-                    <a href="#" class="footer__link">VKontakte</a>
-                    <a href="#" class="footer__link">WhatsApp</a>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; 2023 ВашСайт. Все права защищены.</p>
-            </div>
+  <!-- Подвал -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__content">
+        <div class="site-footer__section">
+          <h3 class="site-footer__title">О компании</h3>
+          <p class="site-footer__text">Магазин винила в Москве</p>
         </div>
-    </footer>
+        <div class="site-footer__section">
+          <h3 class="site-footer__title">Контакты</h3>
+          <p class="site-footer__text">Телефон: +7 (950) 189-35-57</p>
+          <p class="site-footer__text">Email: pollzyaver777</p>
+          <p class="site-footer__text">Адрес: г. Москва, ул. 11-я Парковая, 36</p>
+        </div>
+        <div class="site-footer__section">
+          <h3 class="site-footer__title">Мы в соцсетях</h3>
+          <a href="https://t.me/meinewelllt" class="site-footer__link">Telegram</a>
+          <a href="https://vk.com/p.zavershinskaya" class="site-footer__link">VKontakte</a>
+          <a href="https://wa.me/79501893557" class="site-footer__link">WhatsApp</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2025 ВашСайт. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="main.js" defer></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
