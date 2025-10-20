@@ -3,184 +3,249 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>О нас - ВашСайт</title>
-  <meta name="description" content="Узнайте больше о нашей компании, миссии и команде профессионалов, создающей инновационные решения для вашего бизнеса.">
+  <title>О нас - VinylStore</title>
+  <meta name="description" content="Узнайте больше о нашем магазине винила, нашей миссии и команде профессионалов.">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Шапка -->
   <header class="site-header">
-    <div class="site-header__container container">
-      <a href="index.html" class="site-header__brand">VinylStore</a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <a href="index.html" class="site-nav__link site-nav__link--active">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a href="about.html" class="site-nav__link">О нас</a>
-          </li>
-          <li class="site-nav__item">
-            <a href="contacts.html" class="site-nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="index.html">VinylStore</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main class="main">
     <div class="container">
       <!-- Хлебные крошки -->
-      <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <a href="index.html">Главная</a>
-        <span>→</span>
-        <span class="current">О нас</span>
+      <nav aria-label="Хлебные крошки" class="py-3">
+        <a href="index.html" class="text-decoration-none" style="color: var(--vinyl-red);">Главная</a>
+        <span class="text-muted mx-2">→</span>
+        <span class="text-muted">О нас</span>
       </nav>
 
       <!-- Hero -->
-      <section class="hero fade-in-up">
-        <h1 class="hero__title">О нашей компании</h1>
-        <p class="hero__description">С 2023 года мы помогаем бизнесу расти с помощью современных digital-решений</p>
+      <section class="hero bg-primary text-white py-5 mb-5 text-center">
+        <div class="container">
+          <h1 class="display-4 fw-bold mb-4">О нашем магазине</h1>
+          <p class="lead mb-4">С 2023 года мы дарим музыку в самом качественном формате - на виниле</p>
+        </div>
       </section>
 
       <!-- Миссия -->
-      <section class="section fade-in-up">
-        <h2 class="section__title">🎯 Наша миссия</h2>
-        <p class="section__content">Каждый бизнес заслуживает качественных digital-решений. Мы создаём продукты, которые решают задачи и приносят реальную пользу.</p>
+      <section class="card border-0 shadow mb-5">
+        <div class="card-body p-5">
+          <h2 class="card-title h3 text-center mb-4">Наша миссия</h2>
+          <p class="card-text text-muted text-center mb-5">Мы верим, что винил - это не просто носитель музыки, а искусство, которое должно быть доступно каждому.</p>
 
-        <div class="values-grid">
-          <div class="value-item">
-            <h3>💡 Инновации</h3>
-            <p>Мы постоянно изучаем новые технологии и внедряем их в проекты.</p>
-          </div>
-          <div class="value-item">
-            <h3>🤝 Партнёрство</h3>
-            <p>Работаем как одна команда с клиентами на всех этапах.</p>
-          </div>
-          <div class="value-item">
-            <h3>⭐ Качество</h3>
-            <p>Без компромиссов — только лучшие решения для вашего бизнеса.</p>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="text-center">
+                <h3 class="h5 mb-3">Аутентичность</h3>
+                <p class="text-muted">Сохраняем оригинальное звучание и атмосферу классических записей</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="text-center">
+                <h3 class="h5 mb-3">Сообщество</h3>
+                <p class="text-muted">Объединяем ценителей качественной музыки и виниловой культуры</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="text-center">
+                <h3 class="h5 mb-3">Качество</h3>
+                <p class="text-muted">Только оригинальные пластинки и профессиональное обслуживание</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- История -->
-      <section class="section fade-in-up">
-        <h2 class="section__title">📈 Наша история</h2>
-        <p class="section__content">Мы начали путь в 2023 году и уже заслужили доверие десятков клиентов.</p>
+      <section class="card border-0 shadow mb-5">
+        <div class="card-body p-5">
+          <h2 class="card-title h3 text-center mb-4">Наша история</h2>
+          <p class="card-text text-muted text-center mb-5">Мы начали путь в 2023 году и уже заслужили доверие сотен меломанов.</p>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">Январь 2023</div>
-            <div class="timeline-content">
-              <h3>Основание компании</h3>
-              <p>Первый проект для местного бизнеса.</p>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="text-center">
+                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                  <span class="fw-bold">2023</span>
+                </div>
+                <h4 class="h5 mb-3">Основание</h4>
+                <p class="text-muted">Открытие первого магазина винила в Москве</p>
+              </div>
             </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">Июнь 2023</div>
-            <div class="timeline-content">
-              <h3>Первые 10 клиентов</h3>
-              <p>Рост команды и расширение портфолио.</p>
+            <div class="col-md-4">
+              <div class="text-center">
+                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                  <span class="fw-bold">500+</span>
+                </div>
+                <h4 class="h5 mb-3">Коллекция</h4>
+                <p class="text-muted">Более 500 уникальных виниловых пластинок в ассортименте</p>
+              </div>
             </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">Декабрь 2023</div>
-            <div class="timeline-content">
-              <h3>50+ успешных проектов</h3>
-              <p>Признание на рынке digital-услуг.</p>
+            <div class="col-md-4">
+              <div class="text-center">
+                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                  <span class="fw-bold">100%</span>
+                </div>
+                <h4 class="h5 mb-3">Качество</h4>
+                <p class="text-muted">Только оригинальные издания и профессиональный сервис</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Команда -->
-      <section class="section fade-in-up">
-        <h2 class="section__title">👥 Наша команда</h2>
-        <p class="section__content">15 профессионалов, объединённых целью создавать лучшие digital-решения.</p>
+      <section class="card border-0 shadow mb-5">
+        <div class="card-body p-5">
+          <h2 class="card-title h3 text-center mb-4">Наша команда</h2>
+          <p class="card-text text-muted text-center mb-5">Профессионалы, объединённые любовью к музыке и винилу.</p>
 
-        <div class="team-grid">
-          <div class="team-member">
-            <div class="member-photo"></div>
-            <h3>Анна Иванова</h3>
-            <p class="position">CEO & Основатель</p>
-            <p>12 лет в IT, эксперт в digital-трансформации.</p>
-          </div>
-          <div class="team-member">
-            <div class="member-photo"></div>
-            <h3>Максим Петров</h3>
-            <p class="position">Технический директор</p>
-            <p>Full-stack разработчик с 8-летним опытом.</p>
-          </div>
-          <div class="team-member">
-            <div class="member-photo"></div>
-            <h3>Елена Сидорова</h3>
-            <p class="position">Lead Designer</p>
-            <p>Создаёт интерфейсы, которые нравятся пользователям.</p>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card border-0 text-center h-100">
+                <div class="card-body">
+                  <div class="bg-secondary rounded-circle mx-auto mb-3 overflow-hidden" style="width: 120px; height: 120px;">
+                    <img src="assets/rich.jpg" alt="Алексей Петров" class="w-100 h-100 object-fit-cover">
+                  </div>
+                  <h4 class="h5 mb-2">Рихард Круспе</h4>
+                  <p class="text-primary fw-bold mb-2">Основатель</p>
+                  <p class="text-muted">15 лет в музыкальной индустрии, эксперт по виниловым изданиям</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0 text-center h-100">
+                <div class="card-body">
+                  <div class="bg-secondary rounded-circle mx-auto mb-3 overflow-hidden" style="width: 120px; height: 120px;">
+                    <img src="assets/gore.jpg" alt="Мария Иванова" class="w-100 h-100 object-fit-cover">
+                  </div>
+                  <h4 class="h5 mb-2">Мартин Гор</h4>
+                  <p class="text-primary fw-bold mb-2">Музыкальный эксперт</p>
+                  <p class="text-muted">Знаток классики рока и джаза, помогает с подбором коллекции</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0 text-center h-100">
+                <div class="card-body">
+                  <div class="bg-secondary rounded-circle mx-auto mb-3 overflow-hidden" style="width: 120px; height: 120px;">
+                    <img src="assets/molko.jpg" alt="Дмитрий Сидоров" class="w-100 h-100 object-fit-cover">
+                  </div>
+                  <h4 class="h5 mb-2">Брайн Молко</h4>
+                  <p class="text-primary fw-bold mb-2">Технический специалист</p>
+                  <p class="text-muted">Заботится о качестве звука и состоянии пластинок</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Достижения -->
-      <section class="section fade-in-up">
-        <h2 class="section__title">📊 Наши достижения</h2>
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Завершённых проектов</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">98%</div>
-            <div class="stat-label">Довольных клиентов</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">15</div>
-            <div class="stat-label">Профессионалов в команде</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Поддержка</div>
+      <section class="card border-0 shadow mb-5">
+        <div class="card-body p-5">
+          <h2 class="card-title h3 text-center mb-4">Наши достижения</h2>
+          <div class="row g-4 text-center">
+            <div class="col-md-3">
+              <div class="border rounded p-4 h-100">
+                <div class="text-primary fw-bold display-6 mb-2">500+</div>
+                <div class="text-muted">Пластинок в каталоге</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="border rounded p-4 h-100">
+                <div class="text-primary fw-bold display-6 mb-2">98%</div>
+                <div class="text-muted">Довольных клиентов</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="border rounded p-4 h-100">
+                <div class="text-primary fw-bold display-6 mb-2">3</div>
+                <div class="text-muted">Года на рынке</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="border rounded p-4 h-100">
+                <div class="text-primary fw-bold display-6 mb-2">24/7</div>
+                <div class="text-muted">Поддержка</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- CTA -->
-      <section class="section fade-in-up text-center">
-        <h2 class="section__title">Готовы сделать заказ?</h2>
-        <p class="section__content">Свяжитесь с нами сегодня и получите бесплатную консультацию.</p>
-        <a href="contacts.html" class="cta-button">Связаться с нами</a>
+      <section class="card border-0 shadow text-center">
+        <div class="card-body p-5">
+          <h2 class="card-title h3 mb-4">Готовы начать коллекцию?</h2>
+          <p class="card-text text-muted mb-4">Свяжитесь с нами сегодня и получите бесплатную консультацию по подбору винила.</p>
+          <a href="contacts.html" class="btn btn-primary btn-lg">Связаться с нами</a>
+        </div>
       </section>
     </div>
   </main>
 
   <!-- Подвал -->
-  <footer class="site-footer">
+  <footer class="site-footer bg-dark text-white py-5 mt-5">
     <div class="container">
-      <div class="site-footer__content">
-        <div class="site-footer__section">
-          <h3 class="site-footer__title">О компании</h3>
-          <p class="site-footer__text">Магазин винила в Москве</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h3 class="h5 mb-3">О компании</h3>
+          <p class="text-muted">Магазин винила в Москве</p>
         </div>
-        <div class="site-footer__section">
-          <h3 class="site-footer__title">Контакты</h3>
-          <p class="site-footer__text">Телефон: +7 (950) 189-35-57</p>
-          <p class="site-footer__text">Email: pollzyaver777</p>
-          <p class="site-footer__text">Адрес: г. Москва, ул. 11-я Парковая, 36</p>
+        <div class="col-md-4">
+          <h3 class="h5 mb-3">Контакты</h3>
+          <p class="text-muted mb-1">Телефон: +7 (950) 189-35-57</p>
+          <p class="text-muted mb-1">Email: pollzyaver777@gmail.com</p>
+          <p class="text-muted">Адрес: г. Москва, ул. 11-я Парковая, 36</p>
         </div>
-        <div class="site-footer__section">
-          <h3 class="site-footer__title">Мы в соцсетях</h3>
-          <a href="https://t.me/meinewelllt" class="site-footer__link">Telegram</a>
-          <a href="https://vk.com/p.zavershinskaya" class="site-footer__link">VKontakte</a>
-          <a href="https://wa.me/79501893557" class="site-footer__link">WhatsApp</a>
+        <div class="col-md-4">
+          <h3 class="h5 mb-3">Мы в соцсетях</h3>
+          <div class="d-flex flex-column gap-2">
+            <a href="https://t.me/meinewelllt" class="text-decoration-none" style="color: var(--vinyl-red);">Telegram</a>
+            <a href="https://vk.com/p.zavershinskaya" class="text-decoration-none" style="color: var(--vinyl-red);">VKontakte</a>
+            <a href="https://wa.me/79501893557" class="text-decoration-none" style="color: var(--vinyl-red);">WhatsApp</a>
+          </div>
         </div>
       </div>
-      <div class="site-footer__bottom">
-        <p>&copy; 2025 ВашСайт. Все права защищены.</p>
+      <hr class="my-4">
+      <div class="text-center">
+        <p class="text-muted mb-0">&copy; 2025 VinylStore. Все права защищены.</p>
       </div>
     </div>
   </footer>
 
-  <script src="main.js" defer></script>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
