@@ -143,6 +143,10 @@ body {
   padding: 0;
 }
 
+.nav-menu li {
+  position: relative; /* можно добавить для страховки */
+}
+
 .nav-link {
   padding: var(--space-sm) var(--space-md);
   color: var(--vinyl-muted);
@@ -165,25 +169,38 @@ body {
 }
 
 /* Desktop hover effects */
+/* Desktop hover effects */
 @media (min-width: 769px) {
   .nav-link {
+    position: relative;
     overflow: hidden;
   }
-  
+
   .nav-link::before {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: -100%;
+    bottom: 0; /* линия внизу */
+    left: -100%; /* прячем за пределами ссылки */
     width: 100%;
     height: 2px;
     background: var(--vinyl-red);
-    transition: var(--transition);
+    transition: left 0.3s ease;
   }
-  
+
   .nav-link:hover::before,
   .nav-link.active::before {
-    left: 0;
+    left: 0; /* линия полностью видна */
+  }
+
+  /* Чтобы текст ссылки не прыгал, делаем padding одинаковым */
+  .nav-link {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  /* Опционально: убрать background у активной ссылки, если не нужен */
+  .nav-link.active {
+    background: transparent;
+    color: var(--vinyl-red);
   }
 }
 
@@ -218,11 +235,13 @@ body {
   border-radius: 1px;
 }
 
+/* ----------- MOBILE NAV ----------- */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
+    z-index: 1001;
   }
-  
+
   .site-nav {
     position: fixed;
     top: 0;
@@ -231,51 +250,51 @@ body {
     background: var(--vinyl-card);
     border-bottom: 1px solid var(--vinyl-border);
     box-shadow: 0 5px 30px rgba(0,0,0,0.5);
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
+    padding-top: 70px; /* пространство под шапку */
+    overflow-y: auto;
+    max-height: 100vh;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
   }
-  
+
   .site-nav.active {
-    max-height: 100vh;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    padding: 80px var(--space-xl) var(--space-xl);
   }
-  
+
   .nav-menu {
     flex-direction: column;
-    gap: var(--space-xs);
+    gap: var(--space-md); /* расстояние между пунктами */
     width: 100%;
     align-items: stretch;
+    padding-inline: var(--space-lg);
+    margin: 0;
   }
-  
+
   .nav-link {
+    display: block;
     width: 100%;
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--space-md) 0;
     border-radius: var(--radius-md);
-    margin-bottom: 0;
     font-size: var(--text-lg);
-    border: 1px solid transparent;
-    text-align: center;
     font-weight: 600;
+    text-align: center;
     transition: all 0.3s ease;
+    box-sizing: border-box;
   }
-  
+
   .nav-link:hover,
   .nav-link.active {
-    border-color: var(--vinyl-red);
     background: var(--vinyl-light-bg);
+    border: 1px solid var(--vinyl-red);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(156, 23, 23, 0.2);
   }
-  
+
   /* Hamburger animation */
   .nav-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
@@ -288,6 +307,11 @@ body {
   
   .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* Сделаем, чтобы пункты не накладывались при маленьком экране */
+  body.menu-open {
+    overflow: hidden; /* запрещаем скролл тела страницы */
   }
 }
 
@@ -574,26 +598,32 @@ body {
 
 .product-meta {
   display: flex;
-  gap: var(--space-md);
-  margin-bottom: var(--space-md);
   flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--vinyl-muted);
 }
 
+.product-price {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #ffd700, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+
 .product-year,
-.product-genre {
+.product-genre,
+.product-format {
   background: var(--vinyl-light-bg);
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-sm);
   font-size: var(--text-xs);
   color: var(--vinyl-muted);
   border: 1px solid var(--vinyl-border);
-}
-
-.product-price {
-  font-size: var(--text-xl);
-  font-weight: 700;
-  color: var(--vinyl-red);
-  margin-bottom: var(--space-md);
 }
 
 /* ===== CATALOG FILTERS ===== */
@@ -1156,4 +1186,83 @@ body.menu-open {
     line-height: 35px;
     font-size: var(--text-xs);
   }
+}
+
+.contact-form-section {
+  max-width: 800px;
+  margin-inline: auto;
+  background: var(--vinyl-card);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.contact-form-section input,
+.contact-form-section select,
+.contact-form-section textarea {
+  width: 100%;
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--vinyl-border);
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.contact-form-section input:focus,
+.contact-form-section select:focus,
+.contact-form-section textarea:focus {
+  border-color: var(--vinyl-red);
+  box-shadow: 0 0 0 3px rgba(255, 23, 23, 0.15);
+}
+
+.contact-form-section button {
+  background: var(--vinyl-red);
+  color: white;
+  font-weight: 600;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  transition: background 0.3s;
+}
+
+.contact-form-section button:hover {
+  background: #ff4d4d;
+}
+
+.map-section iframe {
+  border-radius: var(--radius-md);
+}
+
+.contact-info-section,
+.working-hours-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  justify-content: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.contact-card {
+  background: var(--vinyl-card);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  flex: 1 1 300px;
+  min-width: 250px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.contact-card h2 {
+  margin-bottom: var(--space-sm);
+  font-size: 1.3rem;
+  color: var(--vinyl-text);
+}
+
+.contact-card p,
+.contact-card li {
+  font-size: 1rem;
+  color: var(--vinyl-muted);
+  margin-bottom: 0.5rem;
+}
+
+.contact-card li strong {
+  color: var(--vinyl-text);
 }
