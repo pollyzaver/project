@@ -2,171 +2,425 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Главная - VinylStore</title>
-  <meta name="description" content="Добро пожаловать в магазин винила!">
+  <meta name="description" content="Магазин виниловых пластинок в Москве">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <!-- Шапка с Bootstrap навигацией -->
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bold fs-3" href="index.html">VinylStore</a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Главная</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">О нас</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Контакты</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="logo" href="index.html">VinylStore</a>
+
+      <!-- Бургер -->
+      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-navigation">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <!-- Навигация -->
+      <nav id="primary-navigation" class="site-nav" aria-label="Основная навигация">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Главная</a></li>
+          <li><a href="about.html" class="nav-link">О нас</a></li>
+          <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="main">
-    <!-- Hero секция -->
-    <section class="hero bg-primary text-white py-5 mb-5">
-      <div class="container text-center">
-        <h1 class="display-4 fw-bold mb-4">Добро пожаловать в магазин винила!</h1>
-        <p class="lead mb-4">Мы создаём инновационные решения для вашего бизнеса с 2023 года</p>
-        <a href="#portfolio" class="btn btn-light btn-lg">Смотреть ассортимент</a>
+  <!-- overlay -->
+  <div class="overlay" tabindex="-1" aria-hidden="true"></div>
+
+  <main id="main-content" class="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="page-hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content">
+          <h1 id="hero-title" class="hero-title">Добро пожаловать в мир винила!</h1>
+          <p class="hero-subtitle">Наслаждайтесь аутентичным звучанием с 2023 года</p>
+
+          <div class="hero-actions">
+            <a href="#catalog" class="btn btn-primary">Смотреть каталог</a>
+            <a href="about.html" class="btn btn-white">Узнать больше</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <div class="container">
-      <!-- Услуги -->
-      <section id="services" class="card border-0 shadow mb-5">
-        <div class="card-body p-5 text-center">
-          <h2 class="card-title h3 mb-4">Наши услуги</h2>
-          <p class="card-text text-muted mb-4">Веб-разработка, дизайн, консультации и многое другое.</p>
-          <a href="contacts.html#contact-form" class="btn btn-primary btn-lg">Связаться с нами</a>
-        </div>
-      </section>
+    <!-- ===== FEATURES ===== -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="section-content">
+          <h2 class="section-title">Почему выбирают винил?</h2>
+          <p class="section-subtitle">Уникальные преимущества аналогового звука</p>
 
-      <!-- Карточки товаров с Bootstrap сеткой -->
-      <section id="portfolio" class="card border-0 shadow mb-5">
-        <div class="card-body p-5">
-          <h2 class="card-title h3 mb-4">Ассортимент</h2>
-          <p class="card-text text-muted text-center mb-5">Ознакомьтесь с нашими виниловыми пластинками</p>
-          
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="card h-100 border-0 shadow-sm">
-                <img src="assets/vinyl1.jpg" class="card-img-top" alt="Пластинка 1">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Классический рок</h5>
-                  <p class="card-text text-muted">Коллекция лучших рок-альбомов</p>
-                  <button class="btn btn-outline-primary">Подробнее</button>
-                </div>
-              </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">♪</div>
+              <h3>Аутентичный звук</h3>
+              <p>Тёплый аналоговый звук, который невозможно воспроизвести цифровыми средствами</p>
             </div>
-            <div class="col-md-4">
-              <div class="card h-100 border-0 shadow-sm">
-                <img src="assets/vinyl2.jpg" class="card-img-top" alt="Пластинка 2">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Джаз коллекция</h5>
-                  <p class="card-text text-muted">Вечная классика джаза</p>
-                  <button class="btn btn-outline-primary">Подробнее</button>
-                </div>
-              </div>
+            <div class="feature-card">
+              <div class="feature-icon">★</div>
+              <h3>Коллекционная ценность</h3>
+              <p>Виниловые пластинки - это не только музыка, но и ценные коллекционные предметы</p>
             </div>
-            <div class="col-md-4">
-              <div class="card h-100 border-0 shadow-sm">
-                <img src="assets/vinyl3.jpg" class="card-img-top" alt="Пластинка 3">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Современный хип-хоп</h5>
-                  <p class="card-text text-muted">Актуальные хип-хоп релизы</p>
-                  <button class="btn btn-outline-primary">Подробнее</button>
-                </div>
-              </div>
+            <div class="feature-card">
+              <div class="feature-icon">◉</div>
+              <h3>Уникальный дизайн</h3>
+              <p>Большие обложки с произведениями искусства, которые становятся частью интерьера</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Аккордеон Bootstrap -->
-      <div class="card border-0 shadow mb-5">
-        <div class="card-body p-5">
-          <h2 class="mb-4">Часто задаваемые вопросы</h2>
-          <div class="accordion" id="faqAccordion">
-            <div class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                  Как сделать заказ?
-                </button>
-              </h3>
-              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  Вы можете сделать заказ через наш сайт, по телефону или посетив наш магазин.
+    <!-- ===== CATALOG ===== -->
+    <section id="catalog" class="catalog-section">
+      <div class="container">
+        <div class="card">
+          <h2 class="section-title">Популярные пластинки</h2>
+          <p class="section-subtitle">Лучшие предложения этого месяца</p>
+
+          <div class="catalog-filters" role="tablist" aria-label="Фильтры каталога">
+            <button class="filter-button active" data-filter="all" role="tab" aria-selected="true">Все</button>
+            <button class="filter-button" data-filter="rock" role="tab" aria-selected="false">Рок</button>
+            <button class="filter-button" data-filter="electronic" role="tab" aria-selected="false">Электроника</button>
+            <button class="filter-button" data-filter="alternative" role="tab" aria-selected="false">Альтернатива</button>
+            <button class="filter-button" data-filter="metal" role="tab" aria-selected="false">Метал</button>
+          </div>
+
+          <div class="catalog-grid">
+            <!-- Depeche Mode -->
+            <div class="product-card" data-category="electronic">
+              <div class="product-image">
+                <div class="product-badge">Хит</div>
+                <img src="assets/violator.jpg" alt="Depeche Mode - Violator">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Violator</h3>
+                <p class="product-description">Depeche Mode</p>
+                <div class="product-meta">
+                  <span class="product-year">1990</span>
+                  <span class="product-genre">Электроника</span>
                 </div>
+                <div class="product-price">3 290 ₽</div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                  Есть ли доставка?
-                </button>
-              </h3>
-              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">
-                  Да, мы осуществляем доставку по всей России.
+
+            <div class="product-card" data-category="electronic">
+              <div class="product-image">
+                <img src="assets/dev.jpg" alt="Depeche Mode - Songs of Faith and Devotion">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Songs of Faith and Devotion</h3>
+                <p class="product-description">Depeche Mode</p>
+                <div class="product-meta">
+                  <span class="product-year">1993</span>
+                  <span class="product-genre">Электроника</span>
                 </div>
+                <div class="product-price">3 490 ₽</div>
+              </div>
+            </div>
+
+            <!-- Massive Attack - Mezzanine -->
+            <div class="product-card" data-category="electronic">
+              <div class="product-image">
+                <div class="product-badge">Хит</div>
+                <img src="assets/Mezzanine.jpg" alt="Massive Attack - Mezzanine">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Mezzanine</h3>
+                <p class="product-description">Massive Attack</p>
+                <div class="product-meta">
+                  <span class="product-year">1998</span>
+                  <span class="product-genre">Электроника</span>
+                </div>
+                <div class="product-price">4 290 ₽</div>
+              </div>
+            </div>
+
+            <!-- Placebo -->
+            <div class="product-card" data-category="alternative">
+              <div class="product-image">
+                <img src="assets/WithoutyouI'mnothing.jpg" alt="Placebo - Without You I'm Nothing">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Without You I'm Nothing</h3>
+                <p class="product-description">Placebo</p>
+                <div class="product-meta">
+                  <span class="product-year">1998</span>
+                  <span class="product-genre">Альтернатива</span>
+                </div>
+                <div class="product-price">2 990 ₽</div>
+              </div>
+            </div>
+
+            <!-- Rammstein -->
+            <div class="product-card" data-category="metal">
+              <div class="product-image">
+                <div class="product-badge">Хит</div>
+                <img src="assets/mutter.jpg" alt="Rammstein - Mutter">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Mutter</h3>
+                <p class="product-description">Rammstein</p>
+                <div class="product-meta">
+                  <span class="product-year">2001</span>
+                  <span class="product-genre">Метал</span>
+                </div>
+                <div class="product-price">3 790 ₽</div>
+              </div>
+            </div>
+
+            <!-- Scorpions - Still Loving You (Single) -->
+            <div class="product-card" data-category="rock">
+              <div class="product-image">
+                <div class="product-badge">Редкий</div>
+                <img src="assets/still.jpg" alt="Scorpions - Still Loving You">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Still Loving You</h3>
+                <p class="product-description">Scorpions (Single)</p>
+                <div class="product-meta">
+                  <span class="product-year">1984</span>
+                  <span class="product-genre">Рок</span>
+                </div>
+                <div class="product-price">4 590 ₽</div>
+              </div>
+            </div>
+
+            <!-- Cigarettes After Sex -->
+            <div class="product-card" data-category="alternative">
+              <div class="product-image">
+                <div class="product-badge">Новинка</div>
+                <img src="assets/cig.jpg" alt="Cigarettes After Sex">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Cigarettes After Sex</h3>
+                <p class="product-description">Cigarettes After Sex</p>
+                <div class="product-meta">
+                  <span class="product-year">2017</span>
+                  <span class="product-genre">Альтернатива</span>
+                </div>
+                <div class="product-price">3 190 ₽</div>
+              </div>
+            </div>
+
+            <!-- Nine Inch Nails -->
+            <div class="product-card" data-category="alternative">
+              <div class="product-image">
+                <img src="assets/nin.jpg" alt="Nine Inch Nails - The Downward Spiral">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">The Downward Spiral</h3>
+                <p class="product-description">Nine Inch Nails</p>
+                <div class="product-meta">
+                  <span class="product-year">1994</span>
+                  <span class="product-genre">Альтернатива</span>
+                </div>
+                <div class="product-price">3 590 ₽</div>
+              </div>
+            </div>
+
+            <!-- Muse - Origin of Symmetry -->
+            <div class="product-card" data-category="rock">
+              <div class="product-image">
+                <div class="product-badge">Классика</div>
+                <img src="assets/OriginofSymmetry.jpg" alt="Muse - Origin of Symmetry">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Origin of Symmetry</h3>
+                <p class="product-description">Muse</p>
+                <div class="product-meta">
+                  <span class="product-year">2001</span>
+                  <span class="product-genre">Рок</span>
+                </div>
+                <div class="product-price">3 690 ₽</div>
+              </div>
+            </div>
+
+            <!-- The Cure -->
+            <div class="product-card" data-category="alternative">
+              <div class="product-image">
+                <div class="product-badge">Классика</div>
+                <img src="assets/cure.jpg" alt="The Cure - Disintegration">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Disintegration</h3>
+                <p class="product-description">The Cure</p>
+                <div class="product-meta">
+                  <span class="product-year">1989</span>
+                  <span class="product-genre">Альтернатива</span>
+                </div>
+                <div class="product-price">3 390 ₽</div>
+              </div>
+            </div>
+
+            <!-- Rammstein - Sehnsucht -->
+            <div class="product-card" data-category="metal">
+              <div class="product-image">
+                <div class="product-badge">Хит</div>
+                <img src="assets/sehnsucht.jpg" alt="Rammstein - Sehnsucht">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Sehnsucht</h3>
+                <p class="product-description">Rammstein</p>
+                <div class="product-meta">
+                  <span class="product-year">1997</span>
+                  <span class="product-genre">Метал</span>
+                </div>
+                <div class="product-price">3 890 ₽</div>
+              </div>
+            </div>
+
+            <!-- HIM -->
+            <div class="product-card" data-category="rock">
+              <div class="product-image">
+                <img src="assets/him.jpg" alt="HIM - Razorblade Romance">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Razorblade Romance</h3>
+                <p class="product-description">HIM</p>
+                <div class="product-meta">
+                  <span class="product-year">1999</span>
+                  <span class="product-genre">Рок</span>
+                </div>
+                <div class="product-price">2 890 ₽</div>
+              </div>
+            </div>
+
+            <!-- Portishead - Dummy -->
+            <div class="product-card" data-category="electronic">
+              <div class="product-image">
+                <div class="product-badge">Классика</div>
+                <img src="assets/dummy.jpg" alt="Portishead - Dummy">
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Dummy</h3>
+                <p class="product-description">Portishead</p>
+                <div class="product-meta">
+                  <span class="product-year">1994</span>
+                  <span class="product-genre">Электроника</span>
+                </div>
+                <div class="product-price">3 990 ₽</div>
+              </div>
+            </div>
+          </div> <!-- Закрываем catalog-grid -->
+
+          <div class="pagination">
+            <button class="pagination-prev" disabled>← Назад</button>
+            <div class="pagination-pages">
+              <button class="pagination-page active">1</button>
+              <button class="pagination-page">2</button>
+              <button class="pagination-page">3</button>
+            </div>
+            <button class="pagination-next">Вперед →</button>
+          </div>
+        </div> <!-- Закрываем card -->
+      </div> <!-- Закрываем container -->
+    </section> <!-- Закрываем section -->
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="card">
+          <h2 class="section-title">Частые вопросы</h2>
+          <p class="section-subtitle">Всё, что нужно знать о покупке винила</p>
+
+          <div class="accordion">
+            <div class="accordion-item">
+              <input type="checkbox" id="acc1" class="accordion-input">
+              <label for="acc1" class="accordion-button">
+                Как сделать заказ?
+                <span class="accordion-icon">+</span>
+              </label>
+              <div class="accordion-content">
+                <p>Можно через сайт, по телефону или в магазине.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <input type="checkbox" id="acc2" class="accordion-input">
+              <label for="acc2" class="accordion-button">
+                Есть ли доставка?
+                <span class="accordion-icon">+</span>
+              </label>
+              <div class="accordion-content">
+                <p>Да, по всей России. В Москве — в день заказа.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <input type="checkbox" id="acc3" class="accordion-input">
+              <label for="acc3" class="accordion-button">
+                Как ухаживать за пластинками?
+                <span class="accordion-icon">+</span>
+              </label>
+              <div class="accordion-content">
+                <p>Храните пластинки вертикально, избегайте прямого солнечного света и пыли. Используйте специальные щетки для очистки.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Готовы начать коллекцию?</h2>
+          <p>Получите бесплатную консультацию по подбору винила от наших экспертов</p>
+          <div class="cta-actions">
+            <a href="contacts.html" class="btn btn-primary">Связаться с нами</a>
+            <a href="tel:+79501893557" class="btn btn-white">Позвонить</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Футер с Bootstrap сеткой -->
-  <footer class="site-footer bg-dark text-white py-5 mt-5">
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <h3 class="h5 mb-3">О компании</h3>
-          <p class="text-muted">Магазин винила в Москве</p>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>О компании</h3>
+          <p>Магазин винила в Москве с 2023 года. Мы предлагаем только качественные пластинки и оборудование.</p>
         </div>
-        <div class="col-md-4">
-          <h3 class="h5 mb-3">Контакты</h3>
-          <p class="text-muted mb-1">Телефон: +7 (950) 189-35-57</p>
-          <p class="text-muted mb-1">Email: pollzyaver777@gmail.com</p>
-          <p class="text-muted">Адрес: г. Москва, ул. 11-я Парковая, 36</p>
+        <div class="footer-column">
+          <h3>Контакты</h3>
+          <p>Телефон: +7 (950) 189-35-57</p>
+          <p>Email: pollzyaver777@gmail.com</p>
+          <p>Адрес: г. Москва, ул. 11-я Парковая, 36</p>
         </div>
-        <div class="col-md-4">
-          <h3 class="h5 mb-3">Мы в соцсетях</h3>
-          <div class="d-flex flex-column gap-2">
-            <a href="https://t.me/meinewelllt" class="text-decoration-none" style="color: var(--vinyl-red);">Telegram</a>
-            <a href="https://vk.com/p.zavershinskaya" class="text-decoration-none" style="color: var(--vinyl-red);">VKontakte</a>
-            <a href="https://wa.me/79501893557" class="text-decoration-none" style="color: var(--vinyl-red);">WhatsApp</a>
+        <div class="footer-column">
+          <h3>Мы в соцсетях</h3>
+          <div class="social-links">
+            <a href="https://t.me/meinewelllt" class="social-link">Telegram</a>
+            <a href="https://vk.com/p.zavershinskaya" class="social-link">VKontakte</a>
+            <a href="https://wa.me/79501893557" class="social-link">WhatsApp</a>
           </div>
         </div>
       </div>
-      <hr class="my-4">
-      <div class="text-center">
-        <p class="text-muted mb-0">&copy; 2025 VinylStore. Все права защищены.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2025 VinylStore. Все права защищены.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
+
 </body>
 </html>

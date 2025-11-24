@@ -6,246 +6,205 @@
   <title>О нас - VinylStore</title>
   <meta name="description" content="Узнайте больше о нашем магазине винила, нашей миссии и команде профессионалов.">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Шапка -->
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bold fs-3" href="index.html">VinylStore</a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Главная</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="about.html">О нас</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Контакты</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="logo" href="index.html">VinylStore</a>
+
+      <!-- Бургер -->
+      <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-navigation">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <!-- Навигация -->
+      <nav id="primary-navigation" class="site-nav" aria-label="Основная навигация">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Главная</a></li>
+          <li><a href="about.html" class="nav-link active">О нас</a></li>
+          <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="main">
     <div class="container">
-      <!-- Хлебные крошки -->
-      <nav aria-label="Хлебные крошки" class="py-3">
-        <a href="index.html" class="text-decoration-none" style="color: var(--vinyl-red);">Главная</a>
-        <span class="text-muted mx-2">→</span>
-        <span class="text-muted">О нас</span>
-      </nav>
 
       <!-- Hero -->
-      <section class="hero bg-primary text-white py-5 mb-5 text-center">
+      <section class="page-hero">
         <div class="container">
-          <h1 class="display-4 fw-bold mb-4">О нашем магазине</h1>
-          <p class="lead mb-4">С 2023 года мы дарим музыку в самом качественном формате - на виниле</p>
+          <h1 class="hero-title">О нашем магазине</h1>
+          <p class="hero-subtitle">С 2023 года мы дарим музыку в самом качественном формате — на виниле.</p>
         </div>
       </section>
 
-      <!-- Миссия -->
-      <section class="card border-0 shadow mb-5">
-        <div class="card-body p-5">
-          <h2 class="card-title h3 text-center mb-4">Наша миссия</h2>
-          <p class="card-text text-muted text-center mb-5">Мы верим, что винил - это не просто носитель музыки, а искусство, которое должно быть доступно каждому.</p>
-
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="text-center">
-                <h3 class="h5 mb-3">Аутентичность</h3>
-                <p class="text-muted">Сохраняем оригинальное звучание и атмосферу классических записей</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="text-center">
-                <h3 class="h5 mb-3">Сообщество</h3>
-                <p class="text-muted">Объединяем ценителей качественной музыки и виниловой культуры</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="text-center">
-                <h3 class="h5 mb-3">Качество</h3>
-                <p class="text-muted">Только оригинальные пластинки и профессиональное обслуживание</p>
-              </div>
-            </div>
-          </div>
+      <div class="features-grid" style="gap: var(--space-lg);">
+      <div class="feature-card" style="padding: var(--space-lg);">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+          </svg>
         </div>
-      </section>
+        <h3>Аутентичность</h3>
+        <p style="color: var(--vinyl-muted); line-height: 1.6;">Сохраняем оригинальное звучание и атмосферу классических записей</p>
+      </div>
+
+      <div class="feature-card" style="padding: var(--space-lg);">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 
+            0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            <path d="M12 6a6 6 0 0 0 0 12 6 6 0 0 0 0-12z"/>
+          </svg>
+        </div>
+        <h3>Сообщество</h3>
+        <p style="color: var(--vinyl-muted); line-height: 1.6;">Объединяем ценителей качественной музыки и виниловой культуры</p>
+      </div>
+
+      <div class="feature-card" style="padding: var(--space-lg);">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 
+            2 9.24l5.46 4.73L5.82 21z"/>
+          </svg>
+        </div>
+        <h3>Качество</h3>
+        <p style="color: var(--vinyl-muted); line-height: 1.6;">Только оригинальные пластинки и профессиональное обслуживание</p>
+      </div>
+    </div>
+
 
       <!-- История -->
-      <section class="card border-0 shadow mb-5">
-        <div class="card-body p-5">
-          <h2 class="card-title h3 text-center mb-4">Наша история</h2>
-          <p class="card-text text-muted text-center mb-5">Мы начали путь в 2023 году и уже заслужили доверие сотен меломанов.</p>
-
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="text-center">
-                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                  <span class="fw-bold">2023</span>
-                </div>
-                <h4 class="h5 mb-3">Основание</h4>
-                <p class="text-muted">Открытие первого магазина винила в Москве</p>
-              </div>
+      <section class="history-section" style="padding-block: var(--space-2xl);">
+        <div class="section-content">
+          <h2>Наша история</h2>
+          <div class="timeline-grid" style="gap: var(--space-xl);">
+            <div class="timeline-item" style="padding: var(--space-md) 0;">
+              <div class="year-circle" style="margin-bottom: var(--space-sm);">2023</div>
+              <h4>Основание</h4>
+              <p style="color: var(--vinyl-muted); line-height: 1.6;">Открытие первого магазина винила в Москве</p>
             </div>
-            <div class="col-md-4">
-              <div class="text-center">
-                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                  <span class="fw-bold">500+</span>
-                </div>
-                <h4 class="h5 mb-3">Коллекция</h4>
-                <p class="text-muted">Более 500 уникальных виниловых пластинок в ассортименте</p>
-              </div>
+            <div class="timeline-item" style="padding: var(--space-md) 0;">
+              <div class="year-circle" style="margin-bottom: var(--space-sm);">500+</div>
+              <h4>Коллекция</h4>
+              <p style="color: var(--vinyl-muted); line-height: 1.6;">Более 500 уникальных виниловых пластинок в ассортименте</p>
             </div>
-            <div class="col-md-4">
-              <div class="text-center">
-                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                  <span class="fw-bold">100%</span>
-                </div>
-                <h4 class="h5 mb-3">Качество</h4>
-                <p class="text-muted">Только оригинальные издания и профессиональный сервис</p>
-              </div>
+            <div class="timeline-item" style="padding: var(--space-md) 0;">
+              <div class="year-circle" style="margin-bottom: var(--space-sm);">100%</div>
+              <h4>Качество</h4>
+              <p style="color: var(--vinyl-muted); line-height: 1.6;">Только оригинальные издания и профессиональный сервис</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Команда -->
-      <section class="card border-0 shadow mb-5">
-        <div class="card-body p-5">
-          <h2 class="card-title h3 text-center mb-4">Наша команда</h2>
-          <p class="card-text text-muted text-center mb-5">Профессионалы, объединённые любовью к музыке и винилу.</p>
-
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="card border-0 text-center h-100">
-                <div class="card-body">
-                  <div class="bg-secondary rounded-circle mx-auto mb-3 overflow-hidden" style="width: 120px; height: 120px;">
-                    <img src="assets/rich.jpg" alt="Алексей Петров" class="w-100 h-100 object-fit-cover">
-                  </div>
-                  <h4 class="h5 mb-2">Рихард Круспе</h4>
-                  <p class="text-primary fw-bold mb-2">Основатель</p>
-                  <p class="text-muted">15 лет в музыкальной индустрии, эксперт по виниловым изданиям</p>
-                </div>
+      <section class="team-section" style="padding-block: var(--space-2xl);">
+        <div class="section-content">
+          <h2>Наша команда</h2>
+          <div class="team-grid" style="gap: var(--space-xl);">
+            <div class="team-card" style="padding: var(--space-lg); background: var(--vinyl-card); box-shadow: var(--shadow-sm); border-radius: var(--radius-lg);">
+              <div class="team-photo">
+                <img src="assets/rich.jpg" alt="Рихард Круспе">
               </div>
+              <h4>Рихард Круспе</h4>
+              <p class="team-role" style="color: var(--vinyl-muted);">Основатель</p>
+              <p style="color: var(--vinyl-muted); line-height: 1.6;">15 лет в музыкальной индустрии, эксперт по виниловым изданиям</p>
             </div>
-            <div class="col-md-4">
-              <div class="card border-0 text-center h-100">
-                <div class="card-body">
-                  <div class="bg-secondary rounded-circle mx-auto mb-3 overflow-hidden" style="width: 120px; height: 120px;">
-                    <img src="assets/gore.jpg" alt="Мария Иванова" class="w-100 h-100 object-fit-cover">
-                  </div>
-                  <h4 class="h5 mb-2">Мартин Гор</h4>
-                  <p class="text-primary fw-bold mb-2">Музыкальный эксперт</p>
-                  <p class="text-muted">Знаток классики рока и джаза, помогает с подбором коллекции</p>
-                </div>
+            <div class="team-card" style="padding: var(--space-lg); background: var(--vinyl-card); box-shadow: var(--shadow-sm); border-radius: var(--radius-lg);">
+              <div class="team-photo">
+                <img src="assets/gore.jpg" alt="Мартин Гор">
               </div>
+              <h4>Мартин Гор</h4>
+              <p class="team-role" style="color: var(--vinyl-muted);">Музыкальный эксперт</p>
+              <p style="color: var(--vinyl-muted); line-height: 1.6;">Знаток классики рока и джаза, помогает с подбором коллекции</p>
             </div>
-            <div class="col-md-4">
-              <div class="card border-0 text-center h-100">
-                <div class="card-body">
-                  <div class="bg-secondary rounded-circle mx-auto mb-3 overflow-hidden" style="width: 120px; height: 120px;">
-                    <img src="assets/molko.jpg" alt="Дмитрий Сидоров" class="w-100 h-100 object-fit-cover">
-                  </div>
-                  <h4 class="h5 mb-2">Брайн Молко</h4>
-                  <p class="text-primary fw-bold mb-2">Технический специалист</p>
-                  <p class="text-muted">Заботится о качестве звука и состоянии пластинок</p>
-                </div>
+            <div class="team-card" style="padding: var(--space-lg); background: var(--vinyl-card); box-shadow: var(--shadow-sm); border-radius: var(--radius-lg);">
+              <div class="team-photo">
+                <img src="assets/molko.jpg" alt="Брайн Молко">
               </div>
+              <h4>Брайн Молко</h4>
+              <p class="team-role" style="color: var(--vinyl-muted);">Технический специалист</p>
+              <p style="color: var(--vinyl-muted); line-height: 1.6;">Заботится о качестве звука и состоянии пластинок</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Достижения -->
-      <section class="card border-0 shadow mb-5">
-        <div class="card-body p-5">
-          <h2 class="card-title h3 text-center mb-4">Наши достижения</h2>
-          <div class="row g-4 text-center">
-            <div class="col-md-3">
-              <div class="border rounded p-4 h-100">
-                <div class="text-primary fw-bold display-6 mb-2">500+</div>
-                <div class="text-muted">Пластинок в каталоге</div>
-              </div>
+      <section class="achievements-section" style="padding-block: var(--space-2xl);">
+        <div class="section-content">
+          <h2>Наши достижения</h2>
+          <div class="stats-grid" style="gap: var(--space-lg); margin-top: var(--space-lg);">
+            <div class="stat-card">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Пластинок в каталоге</div>
             </div>
-            <div class="col-md-3">
-              <div class="border rounded p-4 h-100">
-                <div class="text-primary fw-bold display-6 mb-2">98%</div>
-                <div class="text-muted">Довольных клиентов</div>
-              </div>
+            <div class="stat-card">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Довольных клиентов</div>
             </div>
-            <div class="col-md-3">
-              <div class="border rounded p-4 h-100">
-                <div class="text-primary fw-bold display-6 mb-2">3</div>
-                <div class="text-muted">Года на рынке</div>
-              </div>
+            <div class="stat-card">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Года на рынке</div>
             </div>
-            <div class="col-md-3">
-              <div class="border rounded p-4 h-100">
-                <div class="text-primary fw-bold display-6 mb-2">24/7</div>
-                <div class="text-muted">Поддержка</div>
-              </div>
+            <div class="stat-card">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Поддержка</div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- CTA -->
-      <section class="card border-0 shadow text-center">
-        <div class="card-body p-5">
-          <h2 class="card-title h3 mb-4">Готовы начать коллекцию?</h2>
-          <p class="card-text text-muted mb-4">Свяжитесь с нами сегодня и получите бесплатную консультацию по подбору винила.</p>
-          <a href="contacts.html" class="btn btn-primary btn-lg">Связаться с нами</a>
+      <section class="cta-section" style="padding-block: var(--space-2xl);">
+        <div class="section-content">
+          <h2>Готовы начать коллекцию?</h2>
+          <p style="color: var(--vinyl-text); opacity: 0.9; margin-bottom: var(--space-lg);">
+            Свяжитесь с нами сегодня и получите бесплатную консультацию по подбору винила.
+          </p>
+          <a href="contacts.html" class="btn btn-primary">Связаться с нами</a>
         </div>
       </section>
+
     </div>
   </main>
 
   <!-- Подвал -->
-  <footer class="site-footer bg-dark text-white py-5 mt-5">
+  <footer class="site-footer">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <h3 class="h5 mb-3">О компании</h3>
-          <p class="text-muted">Магазин винила в Москве</p>
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>О компании</h3>
+          <p>Магазин винила в Москве</p>
         </div>
-        <div class="col-md-4">
-          <h3 class="h5 mb-3">Контакты</h3>
-          <p class="text-muted mb-1">Телефон: +7 (950) 189-35-57</p>
-          <p class="text-muted mb-1">Email: pollzyaver777@gmail.com</p>
-          <p class="text-muted">Адрес: г. Москва, ул. 11-я Парковая, 36</p>
+        <div class="footer-column">
+          <h3>Контакты</h3>
+          <p>Телефон: +7 (950) 189-35-57</p>
+          <p>Email: pollzyaver777@gmail.com</p>
+          <p>Адрес: г. Москва, ул. 11-я Парковая, 36</p>
         </div>
-        <div class="col-md-4">
-          <h3 class="h5 mb-3">Мы в соцсетях</h3>
-          <div class="d-flex flex-column gap-2">
-            <a href="https://t.me/meinewelllt" class="text-decoration-none" style="color: var(--vinyl-red);">Telegram</a>
-            <a href="https://vk.com/p.zavershinskaya" class="text-decoration-none" style="color: var(--vinyl-red);">VKontakte</a>
-            <a href="https://wa.me/79501893557" class="text-decoration-none" style="color: var(--vinyl-red);">WhatsApp</a>
+        <div class="footer-column">
+          <h3>Мы в соцсетях</h3>
+          <div class="social-links">
+            <a href="https://t.me/meinewelllt">Telegram</a>
+            <a href="https://vk.com/p.zavershinskaya">VKontakte</a>
+            <a href="https://wa.me/79501893557">WhatsApp</a>
           </div>
         </div>
       </div>
-      <hr class="my-4">
-      <div class="text-center">
-        <p class="text-muted mb-0">&copy; 2025 VinylStore. Все права защищены.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2025 VinylStore. Все права защищены.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
