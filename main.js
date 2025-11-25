@@ -64,10 +64,10 @@
       // Обновляем активную кнопку
       filterButtons.forEach(b => {
         b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
+        b.setAttribute('aria-pressed', 'false'); // Меняем на aria-pressed
       });
       btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
+      btn.setAttribute('aria-pressed', 'true'); // Меняем на aria-pressed
 
       // Фильтруем продукты
       const filter = btn.dataset.filter;
@@ -93,6 +93,14 @@
       setTimeout(() => {
         initPagination();
       }, 100);
+    });
+
+    // Добавляем обработку клавиатуры
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
     });
   });
 
@@ -123,6 +131,7 @@
         const pageButton = document.createElement('button');
         pageButton.className = `pagination-page ${i === currentPage ? 'active' : ''}`;
         pageButton.textContent = i;
+        pageButton.setAttribute('aria-label', `Страница ${i}`);
         pageButton.addEventListener('click', () => goToPage(i));
         paginationPages.appendChild(pageButton);
       }
@@ -157,11 +166,18 @@
       // Обновляем активную кнопку
       document.querySelectorAll('.pagination-page').forEach((btn, index) => {
         btn.classList.toggle('active', index + 1 === currentPage);
+        btn.setAttribute('aria-current', index + 1 === currentPage ? 'page' : 'false');
       });
       
       // Обновляем состояние кнопок вперед/назад
-      if (paginationPrev) paginationPrev.disabled = currentPage === 1;
-      if (paginationNext) paginationNext.disabled = currentPage === totalPages;
+      if (paginationPrev) {
+        paginationPrev.disabled = currentPage === 1;
+        paginationPrev.setAttribute('aria-label', currentPage === 1 ? 'Первая страница' : 'Предыдущая страница');
+      }
+      if (paginationNext) {
+        paginationNext.disabled = currentPage === totalPages;
+        paginationNext.setAttribute('aria-label', currentPage === totalPages ? 'Последняя страница' : 'Следующая страница');
+      }
     }
     
     // Инициализация только если есть карточки
@@ -213,6 +229,97 @@
     });
   }
 
+  /* ----------- FORM ACCESSIBILITY ----------- */
+
+  function initFormAccessibility() {
+    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
+
+    const fields = contactForm.querySelectorAll('input, select, textarea');
+    
+    fields.forEach(field => {
+      // Добавляем обработчики для валидации
+      field.addEventListener('invalid', function(e) {
+        e.preventDefault();
+        this.setAttribute('aria-invalid', 'true');
+        showFieldError(this, 'Пожалуйста, заполните это поле правильно');
+      });
+      
+      field.addEventListener('blur', function() {
+        if (this.validity.valid) {
+          this.setAttribute('aria-invalid', 'false');
+          hideFieldError(this);
+        }
+      });
+      
+      field.addEventListener('input', function() {
+        if (this.validity.valid) {
+          this.setAttribute('aria-invalid', 'false');
+          hideFieldError(this);
+        }
+      });
+    });
+
+    // Обработка отправки формы
+    contactForm.addEventListener('submit', function(e) {
+      if (!validateForm()) {
+        e.preventDefault();
+        // Показываем общее сообщение об ошибке
+        const firstError = contactForm.querySelector('[aria-invalid="true"]');
+        if (firstError) {
+          firstError.focus();
+        }
+      }
+    });
+  }
+
+  function showFieldError(field, message) {
+    // Убираем существующее сообщение об ошибке
+    hideFieldError(field);
+    
+    // Создаем новое сообщение
+    const errorId = field.id + '-error';
+    const errorElement = document.createElement('div');
+    errorElement.id = errorId;
+    errorElement.className = 'error-message';
+    errorElement.textContent = message;
+    
+    // Добавляем после поля
+    field.parentNode.appendChild(errorElement);
+    
+    // Связываем поле с сообщением об ошибке
+    field.setAttribute('aria-describedby', errorId);
+  }
+
+  function hideFieldError(field) {
+    const errorId = field.id + '-error';
+    const existingError = document.getElementById(errorId);
+    if (existingError) {
+      existingError.remove();
+    }
+    
+    // Убираем ссылку на сообщение об ошибке
+    if (field.getAttribute('aria-describedby') === errorId) {
+      field.removeAttribute('aria-describedby');
+    }
+  }
+
+  function validateForm() {
+    const form = document.getElementById('contactForm');
+    const fields = form.querySelectorAll('input[required], textarea[required]');
+    let isValid = true;
+
+    fields.forEach(field => {
+      if (!field.value.trim()) {
+        field.setAttribute('aria-invalid', 'true');
+        showFieldError(field, 'Это поле обязательно для заполнения');
+        isValid = false;
+      }
+    });
+
+    return isValid;
+  }
+
   /* ----------- ENHANCE ANIMATIONS ----------- */
 
   // Добавляем плавное появление элементов при скролле
@@ -243,6 +350,7 @@
   document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initPagination();
+    initFormAccessibility();
   });
 
 })();
