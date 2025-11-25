@@ -1,13 +1,13 @@
 /* CSS Variables */
 :root {
   /* Colors */
-  --vinyl-red: #9c1717;
+  --vinyl-red: #b30000;  
   --vinyl-red-hover: #ca2735;
   --vinyl-dark: #121212;
   --vinyl-card: #1e1e1e;
   --vinyl-border: #444;
   --vinyl-text: #ffffff;
-  --vinyl-muted: #e0e0e0;
+  --vinyl-muted: #cccccc;
   --vinyl-light-bg: #2a2a2a;
   
   /* Spacing */
@@ -168,39 +168,32 @@ body {
   background: var(--vinyl-light-bg);
 }
 
-/* Desktop hover effects */
-/* Desktop hover effects */
+/* Desktop styles — без полосок */
 @media (min-width: 769px) {
   .nav-link {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .nav-link::before {
-    content: '';
-    position: absolute;
-    bottom: 0; /* линия внизу */
-    left: -100%; /* прячем за пределами ссылки */
-    width: 100%;
-    height: 2px;
-    background: var(--vinyl-red);
-    transition: left 0.3s ease;
-  }
-
-  .nav-link:hover::before,
-  .nav-link.active::before {
-    left: 0; /* линия полностью видна */
-  }
-
-  /* Чтобы текст ссылки не прыгал, делаем padding одинаковым */
-  .nav-link {
     padding: var(--space-sm) var(--space-md);
+    color: var(--vinyl-muted);
+    border-radius: var(--radius-md);
+    transition: background 0.25s ease, color 0.25s ease;
   }
 
-  /* Опционально: убрать background у активной ссылки, если не нужен */
+  /* Ховер на десктопе — аккуратный серый фон */
+  .nav-link:hover {
+    background: var(--vinyl-light-bg);
+    color: var(--vinyl-text);
+  }
+
+  /* Активная страница — красный текст + лёгкий серый фон */
   .nav-link.active {
-    background: transparent;
-    color: var(--vinyl-red);
+      color: white;
+      background: var(--vinyl-red);
+      font-weight: 600;
+      box-shadow: 0 3px 8px rgba(156, 23, 23, 0.25);
+    }
+
+  /* Убираем возможные хвосты от прошлых стилей */
+  .nav-link::before {
+    display: none !important;
   }
 }
 
@@ -589,7 +582,7 @@ body {
 }
 
 .product-description {
-  color: var(--vinyl-muted);
+  color: #b0b0b0;
   margin-bottom: var(--space-md);
   line-height: 1.5;
   font-size: var(--text-sm);
@@ -987,6 +980,7 @@ body.menu-open {
   
   .section-subtitle {
     font-size: var(--text-base);
+    color: #cccccc;
   }
 }
 
@@ -1265,4 +1259,41 @@ body.menu-open {
 
 .contact-card li strong {
   color: var(--vinyl-text);
+}
+
+/* ДОБАВЬТЕ в конец styles.css */
+/* Скрытые элементы для скринридеров */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Улучшение фокуса для всех интерактивных элементов */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a:focus {
+  outline: 3px solid var(--vinyl-red);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Стили для обязательных полей */
+.required {
+  color: var(--vinyl-red);
+}
+
+/* Сообщения об ошибках */
+.error-message {
+  color: #ff4444;
+  font-size: var(--text-sm);
+  margin-top: var(--space-xs);
 }
